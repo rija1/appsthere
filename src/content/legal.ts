@@ -63,9 +63,9 @@ export const legalDocs: LegalDoc[] = [
         heading: l("Your rights", "Vos droits", "你的权利"),
         paragraphs: [
           l(
-            "You may request access to, correction of, or deletion of the personal data we hold (your email address and order history) at any time by writing to support@theappsthere.com. Deleting your data does not invalidate licenses you have already purchased.",
-            "Vous pouvez demander l'accès, la rectification ou la suppression des données personnelles que nous détenons (votre adresse e-mail et l'historique de commandes) à tout moment en écrivant à support@theappsthere.com. La suppression de vos données n'invalide pas les licences déjà achetées.",
-            "你可以随时写信至 support@theappsthere.com，要求访问、更正或删除我们持有的个人数据（你的邮箱地址和订单历史）。删除数据不会使你已购买的许可证失效。",
+            "You may request access to, correction of, or deletion of the personal data we hold (your email address and order history) at any time by writing to support@appsthere.com. Deleting your data does not invalidate licenses you have already purchased.",
+            "Vous pouvez demander l'accès, la rectification ou la suppression des données personnelles que nous détenons (votre adresse e-mail et l'historique de commandes) à tout moment en écrivant à support@appsthere.com. La suppression de vos données n'invalide pas les licences déjà achetées.",
+            "你可以随时写信至 support@appsthere.com，要求访问、更正或删除我们持有的个人数据（你的邮箱地址和订单历史）。删除数据不会使你已购买的许可证失效。",
           ),
         ],
       },
@@ -76,9 +76,9 @@ export const legalDocs: LegalDoc[] = [
     title: l("Terms of Service", "Conditions d'utilisation", "服务条款"),
     updatedAt: "2026-07-17",
     intro: l(
-      "These terms govern your use of TheAppsThere website and the purchase and use of our applications. By purchasing or using our software, you agree to them.",
-      "Ces conditions régissent votre utilisation du site TheAppsThere ainsi que l'achat et l'utilisation de nos applications. En achetant ou en utilisant nos logiciels, vous les acceptez.",
-      "本条款约束你对 TheAppsThere 网站的使用以及对我们应用程序的购买和使用。购买或使用我们的软件即表示你同意这些条款。",
+      "These terms govern your use of AppsThere website and the purchase and use of our applications. By purchasing or using our software, you agree to them.",
+      "Ces conditions régissent votre utilisation du site AppsThere ainsi que l'achat et l'utilisation de nos applications. En achetant ou en utilisant nos logiciels, vous les acceptez.",
+      "本条款约束你对 AppsThere 网站的使用以及对我们应用程序的购买和使用。购买或使用我们的软件即表示你同意这些条款。",
     ),
     sections: [
       {
@@ -125,9 +125,9 @@ export const legalDocs: LegalDoc[] = [
         heading: l("Contact", "Contact", "联系方式"),
         paragraphs: [
           l(
-            "Questions about these terms? Write to support@theappsthere.com.",
-            "Des questions sur ces conditions ? Écrivez à support@theappsthere.com.",
-            "对这些条款有疑问？请写信至 support@theappsthere.com。",
+            "Questions about these terms? Write to support@appsthere.com.",
+            "Des questions sur ces conditions ? Écrivez à support@appsthere.com.",
+            "对这些条款有疑问？请写信至 support@appsthere.com。",
           ),
         ],
       },
@@ -147,9 +147,9 @@ export const legalDocs: LegalDoc[] = [
         heading: l("How it works", "Comment ça marche", "如何退款"),
         paragraphs: [
           l(
-            "If a purchase isn't right for you, email support@theappsthere.com within 14 days of the order — or use the refund link in your Paddle receipt — and the full amount will be returned to your original payment method. Refunds are typically processed within 3–5 business days. Your license key is deactivated for future major versions but nothing is uninstalled from your machine.",
-            "Si un achat ne vous convient pas, écrivez à support@theappsthere.com dans les 14 jours suivant la commande — ou utilisez le lien de remboursement de votre reçu Paddle — et le montant intégral sera reversé sur votre moyen de paiement d'origine. Les remboursements sont généralement traités sous 3 à 5 jours ouvrés. Votre clé de licence est désactivée pour les futures versions majeures, mais rien n'est désinstallé de votre machine.",
-            "如果购买不符合你的需求，请在下单后 14 天内写信至 support@theappsthere.com——或使用 Paddle 收据中的退款链接——全额款项将退回你的原支付方式。退款通常在 3–5 个工作日内处理完毕。你的许可证密钥将对未来的主版本停用，但你机器上的任何内容都不会被卸载。",
+            "If a purchase isn't right for you, email support@appsthere.com within 14 days of the order — or use the refund link in your Paddle receipt — and the full amount will be returned to your original payment method. Refunds are typically processed within 3–5 business days. Your license key is deactivated for future major versions but nothing is uninstalled from your machine.",
+            "Si un achat ne vous convient pas, écrivez à support@appsthere.com dans les 14 jours suivant la commande — ou utilisez le lien de remboursement de votre reçu Paddle — et le montant intégral sera reversé sur votre moyen de paiement d'origine. Les remboursements sont généralement traités sous 3 à 5 jours ouvrés. Votre clé de licence est désactivée pour les futures versions majeures, mais rien n'est désinstallé de votre machine.",
+            "如果购买不符合你的需求，请在下单后 14 天内写信至 support@appsthere.com——或使用 Paddle 收据中的退款链接——全额款项将退回你的原支付方式。退款通常在 3–5 个工作日内处理完毕。你的许可证密钥将对未来的主版本停用，但你机器上的任何内容都不会被卸载。",
           ),
           l(
             "Tip: the Free version is the same application with the same editor and exports, so you can evaluate everything except the two Pro models before spending anything.",

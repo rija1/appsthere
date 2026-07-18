@@ -1,6 +1,6 @@
 {
   "common": {
-    "brand": "TheAppsThere",
+    "brand": "AppsThere",
     "download": "Download",
     "downloadFree": "Download free",
     "buyPro": "Buy Pro",
@@ -35,7 +35,7 @@
     "socialProof": "No subscriptions. No accounts. No telemetry."
   },
   "why": {
-    "eyebrow": "Why TheAppsThere",
+    "eyebrow": "Why AppsThere",
     "title": "Four promises, every app.",
     "subtitle": "We only ship software we'd want on our own machines. That translates into four things you can rely on.",
     "fast": {
@@ -115,7 +115,7 @@
       "success": "Thanks — you're on the list.",
       "error": "Something went wrong. Please try again."
     },
-    "rights": "© {year} TheAppsThere. All rights reserved."
+    "rights": "© {year} AppsThere. All rights reserved."
   },
   "appsPage": {
     "metaTitle": "Apps",
@@ -150,7 +150,7 @@
   },
   "blog": {
     "metaTitle": "Blog",
-    "metaDescription": "Updates, development notes, and tips from TheAppsThere.",
+    "metaDescription": "Updates, development notes, and tips from AppsThere.",
     "title": "Notes from the workbench",
     "subtitle": "Release announcements, engineering notes, and practical tips.",
     "readingTime": "{minutes} min read",
@@ -184,7 +184,7 @@
     "successTitle": "Thank you — you're all set.",
     "successSubtitle": "Your payment went through. Your license key is on its way to your inbox and usually arrives within a couple of minutes.",
     "stepsTitle": "Next steps",
-    "step1": "Open the email from TheAppsThere and copy your license key.",
+    "step1": "Open the email from AppsThere and copy your license key.",
     "step2": "In the app, open Settings → License.",
     "step3": "Paste the key — activation is instant and works offline.",
     "noEmail": "Nothing after 10 minutes? Check spam, then write to {email}.",
@@ -196,8 +196,8 @@
     "back": "Back to home"
   },
   "meta": {
-    "homeTitle": "TheAppsThere — Software you'll actually enjoy using",
+    "homeTitle": "AppsThere — Software you'll actually enjoy using",
     "homeDescription": "Fast, elegant, private desktop applications. Pay once, own forever. Home of Lumiso Transcribe.",
-    "titleTemplate": "%s — TheAppsThere"
+    "titleTemplate": "%s — AppsThere"
   }
 }

@@ -1,6 +1,6 @@
 {
   "common": {
-    "brand": "TheAppsThere",
+    "brand": "AppsThere",
     "download": "Télécharger",
     "downloadFree": "Télécharger gratuitement",
     "buyPro": "Acheter Pro",
@@ -35,7 +35,7 @@
     "socialProof": "Sans abonnement. Sans compte. Sans télémétrie."
   },
   "why": {
-    "eyebrow": "Pourquoi TheAppsThere",
+    "eyebrow": "Pourquoi AppsThere",
     "title": "Quatre promesses, chaque app.",
     "subtitle": "Nous ne publions que des logiciels que nous voudrions sur nos propres machines. Concrètement, cela donne quatre garanties.",
     "fast": {
@@ -115,7 +115,7 @@
       "success": "Merci — vous êtes sur la liste.",
       "error": "Une erreur est survenue. Veuillez réessayer."
     },
-    "rights": "© {year} TheAppsThere. Tous droits réservés."
+    "rights": "© {year} AppsThere. Tous droits réservés."
   },
   "appsPage": {
     "metaTitle": "Apps",
@@ -150,7 +150,7 @@
   },
   "blog": {
     "metaTitle": "Blog",
-    "metaDescription": "Actualités, notes de développement et astuces de TheAppsThere.",
+    "metaDescription": "Actualités, notes de développement et astuces de AppsThere.",
     "title": "Notes d'atelier",
     "subtitle": "Annonces de versions, notes d'ingénierie et astuces pratiques.",
     "readingTime": "{minutes} min de lecture",
@@ -184,7 +184,7 @@
     "successTitle": "Merci — tout est prêt.",
     "successSubtitle": "Votre paiement a été accepté. Votre clé de licence est en route vers votre boîte mail et arrive généralement en quelques minutes.",
     "stepsTitle": "Prochaines étapes",
-    "step1": "Ouvrez l'e-mail de TheAppsThere et copiez votre clé de licence.",
+    "step1": "Ouvrez l'e-mail de AppsThere et copiez votre clé de licence.",
     "step2": "Dans l'application, ouvrez Réglages → Licence.",
     "step3": "Collez la clé — l'activation est instantanée et fonctionne hors ligne.",
     "noEmail": "Rien après 10 minutes ? Vérifiez vos spams, puis écrivez à {email}.",
@@ -196,8 +196,8 @@
     "back": "Retour à l'accueil"
   },
   "meta": {
-    "homeTitle": "TheAppsThere — Des logiciels qu'on aime vraiment utiliser",
+    "homeTitle": "AppsThere — Des logiciels qu'on aime vraiment utiliser",
     "homeDescription": "Des applications de bureau rapides, élégantes et privées. Payez une fois, gardez pour toujours. Créateur de Lumiso Transcribe.",
-    "titleTemplate": "%s — TheAppsThere"
+    "titleTemplate": "%s — AppsThere"
   }
 }

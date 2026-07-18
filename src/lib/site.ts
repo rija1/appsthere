@@ -1,12 +1,12 @@
 /** Global site configuration — single source of truth for URLs and identity. */
 export const site = {
-  name: "TheAppsThere",
-  domain: "theappsthere.com",
-  url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://theappsthere.com",
-  twitter: "@theappsthere",
-  github: "https://github.com/theappsthere",
-  email: "hello@theappsthere.com",
-  supportEmail: "support@theappsthere.com",
+  name: "AppsThere",
+  domain: "appsthere.com",
+  url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://appsthere.com",
+  twitter: "@appsthere",
+  github: "https://github.com/appsthere",
+  email: "hello@appsthere.com",
+  supportEmail: "support@appsthere.com",
 } as const;
 
 export function absoluteUrl(path: string): string {

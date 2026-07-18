@@ -16,7 +16,7 @@ export interface LicenseEmail {
 export async function sendLicenseEmail(email: LicenseEmail): Promise<void> {
   const apiKey = process.env.RESEND_API_KEY;
   const from =
-    process.env.LICENSE_EMAIL_FROM ?? "TheAppsThere <licenses@theappsthere.com>";
+    process.env.LICENSE_EMAIL_FROM ?? "AppsThere <licenses@appsthere.com>";
 
   const subject = `Your ${email.appName} license key`;
   const text = [
@@ -32,7 +32,7 @@ export async function sendLicenseEmail(email: LicenseEmail): Promise<void> {
     `Keep this email — the key is your proof of purchase.`,
     `Questions? Just reply to this email.`,
     ``,
-    `— TheAppsThere`,
+    `— AppsThere`,
   ].join("\n");
 
   if (!apiKey) {

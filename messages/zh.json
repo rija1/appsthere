@@ -1,6 +1,6 @@
 {
   "common": {
-    "brand": "TheAppsThere",
+    "brand": "AppsThere",
     "download": "下载",
     "downloadFree": "免费下载",
     "buyPro": "购买专业版",
@@ -35,7 +35,7 @@
     "socialProof": "无订阅。无账号。无遥测。"
   },
   "why": {
-    "eyebrow": "为什么选择 TheAppsThere",
+    "eyebrow": "为什么选择 AppsThere",
     "title": "每款应用，四个承诺。",
     "subtitle": "我们只发布自己也想装在电脑上的软件。落到实处，就是四件你可以信赖的事。",
     "fast": {
@@ -115,7 +115,7 @@
       "success": "谢谢——你已成功订阅。",
       "error": "出了点问题，请重试。"
     },
-    "rights": "© {year} TheAppsThere。保留所有权利。"
+    "rights": "© {year} AppsThere。保留所有权利。"
   },
   "appsPage": {
     "metaTitle": "应用",
@@ -150,7 +150,7 @@
   },
   "blog": {
     "metaTitle": "博客",
-    "metaDescription": "来自 TheAppsThere 的动态、开发笔记与实用技巧。",
+    "metaDescription": "来自 AppsThere 的动态、开发笔记与实用技巧。",
     "title": "工作台笔记",
     "subtitle": "版本发布、工程笔记与实用技巧。",
     "readingTime": "阅读约 {minutes} 分钟",
@@ -184,7 +184,7 @@
     "successTitle": "谢谢——一切就绪。",
     "successSubtitle": "支付已完成。许可证密钥正在发往你的邮箱，通常几分钟内送达。",
     "stepsTitle": "接下来",
-    "step1": "打开来自 TheAppsThere 的邮件，复制你的许可证密钥。",
+    "step1": "打开来自 AppsThere 的邮件，复制你的许可证密钥。",
     "step2": "在应用中打开「设置 → 许可证」。",
     "step3": "粘贴密钥——激活即时完成，离线也可用。",
     "noEmail": "10 分钟后仍未收到？请检查垃圾邮件，然后写信至 {email}。",
@@ -196,8 +196,8 @@
     "back": "返回首页"
   },
   "meta": {
-    "homeTitle": "TheAppsThere — 让你真正爱用的软件",
+    "homeTitle": "AppsThere — 让你真正爱用的软件",
     "homeDescription": "快速、优雅、注重隐私的桌面应用。一次付费，永久拥有。Lumiso Transcribe 出品方。",
-    "titleTemplate": "%s — TheAppsThere"
+    "titleTemplate": "%s — AppsThere"
   }
 }

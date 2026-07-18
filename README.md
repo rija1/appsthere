@@ -1,6 +1,6 @@
-# TheAppsThere.com
+# AppsThere.com
 
-Marketing and commerce site for [TheAppsThere](https://theappsthere.com) —
+Marketing and commerce site for [AppsThere](https://appsthere.com) —
 fast, private, native desktop applications. First product:
 **Lumiso Transcribe** (macOS, on-device Whisper transcription).
 
@@ -20,6 +20,7 @@ npm run dev                  # http://localhost:3000
 | `npm run dev` | Development server |
 | `npm run dev:e2e` | Dev server with entrance animations disabled (screenshot/E2E tooling) |
 | `npm run build` / `npm start` | Production build / serve |
+| `npm run start:server` | Production serve via `server.js` (Plesk/Passenger, PM2) |
 | `npm run lint` | ESLint |
 | `npm run license -- <cmd>` | License tooling: `keygen`, `mint`, `verify` (see below) |
 
@@ -133,6 +134,16 @@ Components under `src/components/ui/` follow the shadcn/cva pattern.
 Motion (`src/components/motion/reveal.tsx`) is entrance-only, ~0.7 s ease-out,
 and renders statically for `prefers-reduced-motion` users (and under
 `NEXT_PUBLIC_DISABLE_ANIMATIONS=1` for screenshot tooling).
+
+## Deployment
+
+There is no database — deploying is code + environment variables. For Plesk
+(Passenger) hosting, follow the step-by-step guide in
+[docs/DEPLOY-PLESK.md](docs/DEPLOY-PLESK.md): it uses [server.js](server.js)
+as the startup file (`npm run start:server`), which runs Next through its
+programmatic handler. `output: "standalone"` is deliberately not used — in
+this Next version its minimal server breaks the default-locale routing
+(see the comments in `server.js`).
 
 ## Before launch
 

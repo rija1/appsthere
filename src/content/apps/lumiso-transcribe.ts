@@ -39,7 +39,7 @@ export const lumisoTranscribe: AppDefinition = {
   paddlePriceId: process.env.NEXT_PUBLIC_PADDLE_PRICE_LUMISO_PRO,
   downloadUrl:
     process.env.NEXT_PUBLIC_DOWNLOAD_URL_LUMISO ??
-    "https://downloads.theappsthere.com/lumiso-transcribe/LumisoTranscribe-1.0.0.dmg",
+    "https://downloads.appsthere.com/lumiso-transcribe/LumisoTranscribe-1.0.0.dmg",
   fileSizeMb: 38,
 
   features: [

@@ -24,9 +24,9 @@ export const posts: BlogPost[] = [
       {
         paragraphs: [
           l(
-            "Today we're shipping Lumiso Transcribe 1.0, the first app under the TheAppsThere name. It turns audio and video into accurate, editable transcripts and subtitles — and it does all of it on your Mac. Nothing is uploaded, ever.",
-            "Nous publions aujourd'hui Lumiso Transcribe 1.0, la première application signée TheAppsThere. Elle transforme audio et vidéo en transcriptions et sous-titres précis et éditables — et tout se passe sur votre Mac. Rien n'est jamais envoyé.",
-            "今天我们发布了 Lumiso Transcribe 1.0——TheAppsThere 旗下的第一款应用。它把音频和视频变成精准、可编辑的文字稿和字幕，而且全部在你的 Mac 上完成。任何数据都不会被上传。",
+            "Today we're shipping Lumiso Transcribe 1.0, the first app under the AppsThere name. It turns audio and video into accurate, editable transcripts and subtitles — and it does all of it on your Mac. Nothing is uploaded, ever.",
+            "Nous publions aujourd'hui Lumiso Transcribe 1.0, la première application signée AppsThere. Elle transforme audio et vidéo en transcriptions et sous-titres précis et éditables — et tout se passe sur votre Mac. Rien n'est jamais envoyé.",
+            "今天我们发布了 Lumiso Transcribe 1.0——AppsThere 旗下的第一款应用。它把音频和视频变成精准、可编辑的文字稿和字幕，而且全部在你的 Mac 上完成。任何数据都不会被上传。",
           ),
           l(
             "We built it because the alternatives all asked for the same trade: hand your recordings to someone's server, or accept clunky tooling. Interviews, client calls, and drafts deserve better than that trade.",
