@@ -1,0 +1,17 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "appsthere-dev",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["run", "dev"],
+      "port": 3000
+    },
+    {
+      "name": "appsthere-e2e",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["run", "dev:e2e"],
+      "port": 3000
+    }
+  ]
+}

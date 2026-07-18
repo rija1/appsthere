@@ -1,0 +1,203 @@
+{
+  "common": {
+    "brand": "TheAppsThere",
+    "download": "下载",
+    "downloadFree": "免费下载",
+    "buyPro": "购买专业版",
+    "learnMore": "了解更多",
+    "browseApps": "浏览应用",
+    "free": "免费",
+    "oneTime": "一次性付费",
+    "version": "版本 {version}",
+    "forPlatform": "适用于 {platform}",
+    "new": "新",
+    "backHome": "返回首页"
+  },
+  "nav": {
+    "apps": "应用",
+    "blog": "博客",
+    "account": "账户",
+    "menu": "菜单",
+    "closeMenu": "关闭菜单"
+  },
+  "theme": {
+    "toggle": "切换主题",
+    "light": "浅色",
+    "dark": "深色"
+  },
+  "localeSwitcher": {
+    "label": "语言"
+  },
+  "hero": {
+    "badge": "Lumiso Transcribe 1.0 已发布",
+    "title": "让你真正爱用的软件。",
+    "subtitle": "我们打造快速、优雅的桌面应用，帮你把工作做好——隐私为先、定价公道、每次打开都是享受。",
+    "socialProof": "无订阅。无账号。无遥测。"
+  },
+  "why": {
+    "eyebrow": "为什么选择 TheAppsThere",
+    "title": "每款应用，四个承诺。",
+    "subtitle": "我们只发布自己也想装在电脑上的软件。落到实处，就是四件你可以信赖的事。",
+    "fast": {
+      "title": "快速",
+      "description": "原生代码、硬件加速、秒速启动。你的时间，是我们唯一不肯浪费的东西。"
+    },
+    "native": {
+      "title": "原生",
+      "description": "真正尊重你操作系统的应用——它的快捷键、它的习惯、它的外观。绝不是网页套壳。"
+    },
+    "private": {
+      "title": "隐私",
+      "description": "数据留在你的设备上。没有账号、没有遥测、没有暗中上传。隐私是默认设置，不是付费档位。"
+    },
+    "affordable": {
+      "title": "实惠",
+      "description": "一次付费，永久拥有。免费版真正可用，专业版的价格不过一顿好饭。"
+    }
+  },
+  "featured": {
+    "eyebrow": "应用目录",
+    "title": "精选应用",
+    "subtitle": "每款应用都精心解决一个真实的问题。目录增长得很慢——这是有意为之。",
+    "from": "起价",
+    "comingSoon": "即将推出",
+    "viewAll": "查看全部应用"
+  },
+  "testimonials": {
+    "eyebrow": "用户评价",
+    "title": "深受注重细节的人喜爱。"
+  },
+  "faq": {
+    "eyebrow": "常见问题",
+    "title": "常见问题",
+    "subtitle": "首次购买前大家最常问的问题，简明版。",
+    "items": {
+      "platforms": {
+        "question": "你们支持哪些平台？",
+        "answer": "每款应用的页面都会标明平台。Lumiso Transcribe 是原生 macOS 应用（macOS 14+）。后续应用的 Windows 版本将在博客上公布。"
+      },
+      "payment": {
+        "question": "购买流程是怎样的？",
+        "answer": "结账由我们的官方经销商 Paddle 处理——它负责支付、增值税及发票。许可证密钥会在几分钟内通过电子邮件送达。"
+      },
+      "license": {
+        "question": "我会获得什么样的许可证？",
+        "answer": "按人授权的永久许可证，离线验证。可以在你个人使用的每台设备上使用。主版本（1.x）内的更新全部免费。"
+      },
+      "refund": {
+        "question": "退款政策是什么？",
+        "answer": "14 天内无理由退款。建议先试用免费版——它就是同一款应用，你会清楚知道自己买的是什么。"
+      }
+    }
+  },
+  "cta": {
+    "title": "今天就试试 Lumiso Transcribe。",
+    "subtitle": "免费版即可正常使用——下载后拖入一段录音，亲自体验。",
+    "primary": "下载 macOS 版",
+    "secondary": "查看全部功能"
+  },
+  "footer": {
+    "tagline": "美观、快速、注重隐私的桌面软件。由独立开发者打造，定价公道。",
+    "product": "产品",
+    "company": "公司",
+    "legal": "法律",
+    "allApps": "全部应用",
+    "changelog": "更新日志",
+    "about": "关于",
+    "privacy": "隐私政策",
+    "terms": "服务条款",
+    "refunds": "退款政策",
+    "newsletter": {
+      "title": "订阅动态",
+      "subtitle": "新应用与重大更新。一年只有几封邮件，绝不打扰。",
+      "placeholder": "you@example.com",
+      "button": "订阅",
+      "success": "谢谢——你已成功订阅。",
+      "error": "出了点问题，请重试。"
+    },
+    "rights": "© {year} TheAppsThere。保留所有权利。"
+  },
+  "appsPage": {
+    "metaTitle": "应用",
+    "metaDescription": "快速、私密的原生桌面应用。一次付费，永久拥有。",
+    "title": "尊重你的应用。",
+    "subtitle": "一个小而精的目录，慢慢打磨、每日维护。每款应用都是原生的、私密的，并且永远属于你。"
+  },
+  "appPage": {
+    "overview": "概览",
+    "screenshots": "应用截图",
+    "screenshotsSubtitle": "真实界面——点击任意屏幕放大查看。",
+    "featuresTitle": "所需俱全，别无冗余",
+    "pricingTitle": "简单公道的定价",
+    "pricingSubtitle": "免费开始。一次付费。永久拥有。",
+    "faqTitle": "常见问题",
+    "requirementsTitle": "系统要求",
+    "changelogTitle": "更新日志",
+    "reviewsTitle": "早期用户怎么说",
+    "downloadTitle": "获取 {name}",
+    "downloadSubtitle": "免费下载，无需账号。随时升级到专业版。",
+    "fileInfo": "{size} MB · macOS 14+ · 已经 Apple 公证",
+    "checkoutUnavailable": "支付正在配置中——请稍后再来。",
+    "buyProFor": "购买专业版 — {price}",
+    "released": "发布日期",
+    "updated": "更新日期",
+    "category": "分类",
+    "categoryProductivity": "效率",
+    "categoryMedia": "媒体",
+    "categoryUtilities": "工具",
+    "lightboxClose": "关闭",
+    "openScreenshot": "查看截图：{title}"
+  },
+  "blog": {
+    "metaTitle": "博客",
+    "metaDescription": "来自 TheAppsThere 的动态、开发笔记与实用技巧。",
+    "title": "工作台笔记",
+    "subtitle": "版本发布、工程笔记与实用技巧。",
+    "readingTime": "阅读约 {minutes} 分钟",
+    "backToBlog": "全部文章",
+    "categories": {
+      "updates": "动态",
+      "development": "开发",
+      "tips": "技巧",
+      "ai": "AI",
+      "windows": "Windows"
+    }
+  },
+  "account": {
+    "metaTitle": "账户",
+    "title": "你的购买记录",
+    "subtitle": "许可证通过电子邮件送达并离线验证——无需维护账户，也没有密码可丢。",
+    "lookupTitle": "重发我的许可证",
+    "lookupSubtitle": "输入购买时使用的邮箱，我们会重发与之关联的全部许可证密钥。",
+    "emailPlaceholder": "you@example.com",
+    "lookupButton": "发送许可证",
+    "lookupSuccess": "如果该邮箱有购买记录，许可证密钥已在路上。",
+    "lookupError": "出了点问题。请重试或联系支持。",
+    "billingTitle": "发票与账单",
+    "billingBody": "支付由我们的官方经销商 Paddle 处理。你的收据邮件中有链接，可查看发票、更新账单信息或申请退款。",
+    "updatesTitle": "更新",
+    "updatesBody": "应用会自行检查更新，每个版本都列在应用的更新日志中。你的许可证涵盖全部 1.x 更新。",
+    "supportTitle": "想找真人？",
+    "supportBody": "写信至 {email}——回复你的正是开发这款应用的人。"
+  },
+  "checkout": {
+    "successTitle": "谢谢——一切就绪。",
+    "successSubtitle": "支付已完成。许可证密钥正在发往你的邮箱，通常几分钟内送达。",
+    "stepsTitle": "接下来",
+    "step1": "打开来自 TheAppsThere 的邮件，复制你的许可证密钥。",
+    "step2": "在应用中打开「设置 → 许可证」。",
+    "step3": "粘贴密钥——激活即时完成，离线也可用。",
+    "noEmail": "10 分钟后仍未收到？请检查垃圾邮件，然后写信至 {email}。",
+    "downloadApp": "下载应用"
+  },
+  "notFound": {
+    "title": "页面不存在。",
+    "body": "链接可能已过期，或页面已被移动。",
+    "back": "返回首页"
+  },
+  "meta": {
+    "homeTitle": "TheAppsThere — 让你真正爱用的软件",
+    "homeDescription": "快速、优雅、注重隐私的桌面应用。一次付费，永久拥有。Lumiso Transcribe 出品方。",
+    "titleTemplate": "%s — TheAppsThere"
+  }
+}

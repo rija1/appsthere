@@ -1,0 +1,203 @@
+{
+  "common": {
+    "brand": "TheAppsThere",
+    "download": "Download",
+    "downloadFree": "Download free",
+    "buyPro": "Buy Pro",
+    "learnMore": "Learn more",
+    "browseApps": "Browse apps",
+    "free": "Free",
+    "oneTime": "one-time",
+    "version": "Version {version}",
+    "forPlatform": "for {platform}",
+    "new": "New",
+    "backHome": "Back to home"
+  },
+  "nav": {
+    "apps": "Apps",
+    "blog": "Blog",
+    "account": "Account",
+    "menu": "Menu",
+    "closeMenu": "Close menu"
+  },
+  "theme": {
+    "toggle": "Toggle theme",
+    "light": "Light",
+    "dark": "Dark"
+  },
+  "localeSwitcher": {
+    "label": "Language"
+  },
+  "hero": {
+    "badge": "Lumiso Transcribe 1.0 is out",
+    "title": "Software you'll actually enjoy using.",
+    "subtitle": "We build fast, elegant desktop applications that help people get work done — private by design, fairly priced, and a pleasure to open.",
+    "socialProof": "No subscriptions. No accounts. No telemetry."
+  },
+  "why": {
+    "eyebrow": "Why TheAppsThere",
+    "title": "Four promises, every app.",
+    "subtitle": "We only ship software we'd want on our own machines. That translates into four things you can rely on.",
+    "fast": {
+      "title": "Fast",
+      "description": "Native code, hardware acceleration, instant launch. Your time is the one thing we never spend."
+    },
+    "native": {
+      "title": "Native",
+      "description": "Real platform apps that respect your OS — its shortcuts, its conventions, its look. No web wrappers."
+    },
+    "private": {
+      "title": "Private",
+      "description": "Your data stays on your machine. No accounts, no telemetry, no quiet uploads. Privacy is the default, not a tier."
+    },
+    "affordable": {
+      "title": "Affordable",
+      "description": "Pay once, own it forever. Free versions that are actually useful, and Pro upgrades priced like a nice dinner."
+    }
+  },
+  "featured": {
+    "eyebrow": "The catalog",
+    "title": "Featured apps",
+    "subtitle": "Every app solves one real problem, beautifully. The catalog grows slowly — on purpose.",
+    "from": "From",
+    "comingSoon": "Coming soon",
+    "viewAll": "View all apps"
+  },
+  "testimonials": {
+    "eyebrow": "What people say",
+    "title": "Loved by people who notice details."
+  },
+  "faq": {
+    "eyebrow": "Questions",
+    "title": "Frequently asked questions",
+    "subtitle": "The short version of everything people ask before their first purchase.",
+    "items": {
+      "platforms": {
+        "question": "Which platforms do you support?",
+        "answer": "Each app lists its platform on its page. Lumiso Transcribe is a native macOS app (macOS 14+). Windows versions of future apps will be announced on the blog."
+      },
+      "payment": {
+        "question": "How does purchasing work?",
+        "answer": "Checkout is handled by Paddle, our merchant of record — they process the payment, handle VAT, and send your invoice. Your license key arrives by email within minutes."
+      },
+      "license": {
+        "question": "What kind of license do I get?",
+        "answer": "A perpetual, per-person license verified offline. Use it on every machine you personally use. Major versions (1.x) include free updates."
+      },
+      "refund": {
+        "question": "What's your refund policy?",
+        "answer": "14 days, no questions asked. Try the free version first — it's the same app, so you'll know exactly what you're buying."
+      }
+    }
+  },
+  "cta": {
+    "title": "Try Lumiso Transcribe today.",
+    "subtitle": "The free version is fully usable — download it, drop in a recording, and see for yourself.",
+    "primary": "Download for macOS",
+    "secondary": "See all features"
+  },
+  "footer": {
+    "tagline": "Beautiful, fast, private desktop software. Built by an independent developer, priced fairly.",
+    "product": "Product",
+    "company": "Company",
+    "legal": "Legal",
+    "allApps": "All apps",
+    "changelog": "Changelog",
+    "about": "About",
+    "privacy": "Privacy",
+    "terms": "Terms",
+    "refunds": "Refund policy",
+    "newsletter": {
+      "title": "Stay in the loop",
+      "subtitle": "New apps and major updates. A few emails a year, no noise.",
+      "placeholder": "you@example.com",
+      "button": "Subscribe",
+      "success": "Thanks — you're on the list.",
+      "error": "Something went wrong. Please try again."
+    },
+    "rights": "© {year} TheAppsThere. All rights reserved."
+  },
+  "appsPage": {
+    "metaTitle": "Apps",
+    "metaDescription": "Fast, private, native desktop applications. Pay once, own forever.",
+    "title": "Apps that respect you.",
+    "subtitle": "A small catalog, built slowly and cared for daily. Each app is native, private, and yours forever."
+  },
+  "appPage": {
+    "overview": "Overview",
+    "screenshots": "Screenshots",
+    "screenshotsSubtitle": "The real interface — click any screen to zoom in.",
+    "featuresTitle": "Everything you need, nothing you don't",
+    "pricingTitle": "Simple, fair pricing",
+    "pricingSubtitle": "Start free. Upgrade once. Own it forever.",
+    "faqTitle": "Frequently asked questions",
+    "requirementsTitle": "System requirements",
+    "changelogTitle": "Changelog",
+    "reviewsTitle": "What early users say",
+    "downloadTitle": "Get {name}",
+    "downloadSubtitle": "Free download, no account required. Upgrade to Pro whenever you're ready.",
+    "fileInfo": "{size} MB · macOS 14+ · Notarized by Apple",
+    "checkoutUnavailable": "Checkout is being configured — check back shortly.",
+    "buyProFor": "Buy Pro — {price}",
+    "released": "Released",
+    "updated": "Updated",
+    "category": "Category",
+    "categoryProductivity": "Productivity",
+    "categoryMedia": "Media",
+    "categoryUtilities": "Utilities",
+    "lightboxClose": "Close",
+    "openScreenshot": "View screenshot: {title}"
+  },
+  "blog": {
+    "metaTitle": "Blog",
+    "metaDescription": "Updates, development notes, and tips from TheAppsThere.",
+    "title": "Notes from the workbench",
+    "subtitle": "Release announcements, engineering notes, and practical tips.",
+    "readingTime": "{minutes} min read",
+    "backToBlog": "All posts",
+    "categories": {
+      "updates": "Updates",
+      "development": "Development",
+      "tips": "Tips",
+      "ai": "AI",
+      "windows": "Windows"
+    }
+  },
+  "account": {
+    "metaTitle": "Account",
+    "title": "Your purchases",
+    "subtitle": "Licenses are delivered by email and verified offline — there's no account to maintain and no password to lose.",
+    "lookupTitle": "Resend my licenses",
+    "lookupSubtitle": "Enter your purchase email and we'll resend every license key associated with it.",
+    "emailPlaceholder": "you@example.com",
+    "lookupButton": "Email my licenses",
+    "lookupSuccess": "If that address has purchases, the license keys are on their way.",
+    "lookupError": "Something went wrong. Please try again or contact support.",
+    "billingTitle": "Invoices & billing",
+    "billingBody": "Payments are processed by Paddle, our merchant of record. Your receipt email contains a link to view invoices, update billing details, or request a refund.",
+    "updatesTitle": "Updates",
+    "updatesBody": "Apps check for updates themselves and every release is listed on each app's changelog. Your license covers all 1.x updates.",
+    "supportTitle": "Need a human?",
+    "supportBody": "Write to {email} — you'll get an answer from the person who built the app."
+  },
+  "checkout": {
+    "successTitle": "Thank you — you're all set.",
+    "successSubtitle": "Your payment went through. Your license key is on its way to your inbox and usually arrives within a couple of minutes.",
+    "stepsTitle": "Next steps",
+    "step1": "Open the email from TheAppsThere and copy your license key.",
+    "step2": "In the app, open Settings → License.",
+    "step3": "Paste the key — activation is instant and works offline.",
+    "noEmail": "Nothing after 10 minutes? Check spam, then write to {email}.",
+    "downloadApp": "Download the app"
+  },
+  "notFound": {
+    "title": "This page doesn't exist.",
+    "body": "The link may be outdated, or the page may have moved.",
+    "back": "Back to home"
+  },
+  "meta": {
+    "homeTitle": "TheAppsThere — Software you'll actually enjoy using",
+    "homeDescription": "Fast, elegant, private desktop applications. Pay once, own forever. Home of Lumiso Transcribe.",
+    "titleTemplate": "%s — TheAppsThere"
+  }
+}

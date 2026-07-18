@@ -1,0 +1,203 @@
+{
+  "common": {
+    "brand": "TheAppsThere",
+    "download": "Télécharger",
+    "downloadFree": "Télécharger gratuitement",
+    "buyPro": "Acheter Pro",
+    "learnMore": "En savoir plus",
+    "browseApps": "Voir les apps",
+    "free": "Gratuit",
+    "oneTime": "paiement unique",
+    "version": "Version {version}",
+    "forPlatform": "pour {platform}",
+    "new": "Nouveau",
+    "backHome": "Retour à l'accueil"
+  },
+  "nav": {
+    "apps": "Apps",
+    "blog": "Blog",
+    "account": "Compte",
+    "menu": "Menu",
+    "closeMenu": "Fermer le menu"
+  },
+  "theme": {
+    "toggle": "Changer de thème",
+    "light": "Clair",
+    "dark": "Sombre"
+  },
+  "localeSwitcher": {
+    "label": "Langue"
+  },
+  "hero": {
+    "badge": "Lumiso Transcribe 1.0 est disponible",
+    "title": "Des logiciels qu'on aime vraiment utiliser.",
+    "subtitle": "Nous créons des applications de bureau rapides et élégantes qui aident à bien travailler — privées par conception, au prix juste, et agréables à ouvrir.",
+    "socialProof": "Sans abonnement. Sans compte. Sans télémétrie."
+  },
+  "why": {
+    "eyebrow": "Pourquoi TheAppsThere",
+    "title": "Quatre promesses, chaque app.",
+    "subtitle": "Nous ne publions que des logiciels que nous voudrions sur nos propres machines. Concrètement, cela donne quatre garanties.",
+    "fast": {
+      "title": "Rapide",
+      "description": "Code natif, accélération matérielle, lancement instantané. Votre temps est la seule chose que nous ne dépensons jamais."
+    },
+    "native": {
+      "title": "Natif",
+      "description": "De vraies applications qui respectent votre système — ses raccourcis, ses conventions, son apparence. Pas d'app web déguisée."
+    },
+    "private": {
+      "title": "Privé",
+      "description": "Vos données restent sur votre machine. Pas de compte, pas de télémétrie, pas d'envoi silencieux. La confidentialité est le défaut, pas une option."
+    },
+    "affordable": {
+      "title": "Abordable",
+      "description": "Payez une fois, gardez pour toujours. Des versions gratuites réellement utiles, et des versions Pro au prix d'un bon dîner."
+    }
+  },
+  "featured": {
+    "eyebrow": "Le catalogue",
+    "title": "Applications phares",
+    "subtitle": "Chaque application résout un vrai problème, avec soin. Le catalogue grandit lentement — c'est voulu.",
+    "from": "À partir de",
+    "comingSoon": "Bientôt disponible",
+    "viewAll": "Voir toutes les apps"
+  },
+  "testimonials": {
+    "eyebrow": "Ils en parlent",
+    "title": "Adopté par ceux qui remarquent les détails."
+  },
+  "faq": {
+    "eyebrow": "Questions",
+    "title": "Questions fréquentes",
+    "subtitle": "La version courte de tout ce qu'on nous demande avant un premier achat.",
+    "items": {
+      "platforms": {
+        "question": "Quelles plateformes prenez-vous en charge ?",
+        "answer": "Chaque application indique sa plateforme sur sa page. Lumiso Transcribe est une application macOS native (macOS 14+). Les versions Windows des prochaines apps seront annoncées sur le blog."
+      },
+      "payment": {
+        "question": "Comment se passe l'achat ?",
+        "answer": "Le paiement est géré par Paddle, notre revendeur officiel — il traite le paiement, gère la TVA et envoie votre facture. Votre clé de licence arrive par e-mail en quelques minutes."
+      },
+      "license": {
+        "question": "Quel type de licence vais-je recevoir ?",
+        "answer": "Une licence perpétuelle, par personne, vérifiée hors ligne. Utilisez-la sur toutes les machines que vous utilisez personnellement. Les versions majeures (1.x) incluent les mises à jour gratuites."
+      },
+      "refund": {
+        "question": "Quelle est votre politique de remboursement ?",
+        "answer": "14 jours, sans justification. Essayez d'abord la version gratuite — c'est la même application, vous saurez donc exactement ce que vous achetez."
+      }
+    }
+  },
+  "cta": {
+    "title": "Essayez Lumiso Transcribe dès aujourd'hui.",
+    "subtitle": "La version gratuite est pleinement utilisable — téléchargez-la, déposez un enregistrement et jugez par vous-même.",
+    "primary": "Télécharger pour macOS",
+    "secondary": "Voir toutes les fonctionnalités"
+  },
+  "footer": {
+    "tagline": "Des logiciels de bureau beaux, rapides et privés. Créés par un développeur indépendant, au prix juste.",
+    "product": "Produit",
+    "company": "Société",
+    "legal": "Légal",
+    "allApps": "Toutes les apps",
+    "changelog": "Journal des versions",
+    "about": "À propos",
+    "privacy": "Confidentialité",
+    "terms": "Conditions",
+    "refunds": "Remboursements",
+    "newsletter": {
+      "title": "Restez informé",
+      "subtitle": "Nouvelles apps et mises à jour majeures. Quelques e-mails par an, sans bruit.",
+      "placeholder": "vous@exemple.com",
+      "button": "S'abonner",
+      "success": "Merci — vous êtes sur la liste.",
+      "error": "Une erreur est survenue. Veuillez réessayer."
+    },
+    "rights": "© {year} TheAppsThere. Tous droits réservés."
+  },
+  "appsPage": {
+    "metaTitle": "Apps",
+    "metaDescription": "Des applications de bureau rapides, privées et natives. Payez une fois, gardez pour toujours.",
+    "title": "Des apps qui vous respectent.",
+    "subtitle": "Un petit catalogue, construit lentement et soigné chaque jour. Chaque app est native, privée et à vous pour toujours."
+  },
+  "appPage": {
+    "overview": "Aperçu",
+    "screenshots": "Captures d'écran",
+    "screenshotsSubtitle": "L'interface réelle — cliquez sur un écran pour zoomer.",
+    "featuresTitle": "Tout le nécessaire, rien de superflu",
+    "pricingTitle": "Un prix simple et juste",
+    "pricingSubtitle": "Commencez gratuitement. Payez une fois. Gardez pour toujours.",
+    "faqTitle": "Questions fréquentes",
+    "requirementsTitle": "Configuration requise",
+    "changelogTitle": "Journal des versions",
+    "reviewsTitle": "Ce qu'en disent les premiers utilisateurs",
+    "downloadTitle": "Obtenir {name}",
+    "downloadSubtitle": "Téléchargement gratuit, sans compte. Passez à Pro quand vous voulez.",
+    "fileInfo": "{size} Mo · macOS 14+ · Notarié par Apple",
+    "checkoutUnavailable": "Le paiement est en cours de configuration — revenez bientôt.",
+    "buyProFor": "Acheter Pro — {price}",
+    "released": "Sortie",
+    "updated": "Mise à jour",
+    "category": "Catégorie",
+    "categoryProductivity": "Productivité",
+    "categoryMedia": "Média",
+    "categoryUtilities": "Utilitaires",
+    "lightboxClose": "Fermer",
+    "openScreenshot": "Voir la capture : {title}"
+  },
+  "blog": {
+    "metaTitle": "Blog",
+    "metaDescription": "Actualités, notes de développement et astuces de TheAppsThere.",
+    "title": "Notes d'atelier",
+    "subtitle": "Annonces de versions, notes d'ingénierie et astuces pratiques.",
+    "readingTime": "{minutes} min de lecture",
+    "backToBlog": "Tous les articles",
+    "categories": {
+      "updates": "Actualités",
+      "development": "Développement",
+      "tips": "Astuces",
+      "ai": "IA",
+      "windows": "Windows"
+    }
+  },
+  "account": {
+    "metaTitle": "Compte",
+    "title": "Vos achats",
+    "subtitle": "Les licences sont envoyées par e-mail et vérifiées hors ligne — aucun compte à entretenir, aucun mot de passe à perdre.",
+    "lookupTitle": "Renvoyer mes licences",
+    "lookupSubtitle": "Saisissez l'e-mail utilisé à l'achat et nous renverrons toutes les clés de licence associées.",
+    "emailPlaceholder": "vous@exemple.com",
+    "lookupButton": "Recevoir mes licences",
+    "lookupSuccess": "Si cette adresse a des achats, les clés de licence sont en route.",
+    "lookupError": "Une erreur est survenue. Réessayez ou contactez le support.",
+    "billingTitle": "Factures et paiement",
+    "billingBody": "Les paiements sont traités par Paddle, notre revendeur officiel. Votre e-mail de reçu contient un lien pour consulter vos factures, modifier vos coordonnées de facturation ou demander un remboursement.",
+    "updatesTitle": "Mises à jour",
+    "updatesBody": "Les applications vérifient elles-mêmes les mises à jour et chaque version est listée dans le journal des versions de l'app. Votre licence couvre toutes les mises à jour 1.x.",
+    "supportTitle": "Besoin d'un humain ?",
+    "supportBody": "Écrivez à {email} — c'est la personne qui a créé l'app qui vous répondra."
+  },
+  "checkout": {
+    "successTitle": "Merci — tout est prêt.",
+    "successSubtitle": "Votre paiement a été accepté. Votre clé de licence est en route vers votre boîte mail et arrive généralement en quelques minutes.",
+    "stepsTitle": "Prochaines étapes",
+    "step1": "Ouvrez l'e-mail de TheAppsThere et copiez votre clé de licence.",
+    "step2": "Dans l'application, ouvrez Réglages → Licence.",
+    "step3": "Collez la clé — l'activation est instantanée et fonctionne hors ligne.",
+    "noEmail": "Rien après 10 minutes ? Vérifiez vos spams, puis écrivez à {email}.",
+    "downloadApp": "Télécharger l'application"
+  },
+  "notFound": {
+    "title": "Cette page n'existe pas.",
+    "body": "Le lien est peut-être obsolète, ou la page a été déplacée.",
+    "back": "Retour à l'accueil"
+  },
+  "meta": {
+    "homeTitle": "TheAppsThere — Des logiciels qu'on aime vraiment utiliser",
+    "homeDescription": "Des applications de bureau rapides, élégantes et privées. Payez une fois, gardez pour toujours. Créateur de Lumiso Transcribe.",
+    "titleTemplate": "%s — TheAppsThere"
+  }
+}
