@@ -30,8 +30,8 @@
   },
   "hero": {
     "badge": "Lumiso Transcribe 1.0 已发布",
-    "title": "让你真正爱用的软件。",
-    "subtitle": "我们打造快速、优雅的桌面应用，帮你把工作做好——隐私为先、定价公道、每次打开都是享受。",
+    "title": "从录音到文字稿，完全离线完成。",
+    "subtitle": "Lumiso Transcribe 由 Whisper 驱动，将音频和视频转换为精准的文字稿——完全在你的 Mac 上运行，绝不上传。",
     "socialProof": "无订阅。无账号。无遥测。"
   },
   "why": {

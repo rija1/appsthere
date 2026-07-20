@@ -5,7 +5,7 @@ export function paidTierOf(app: AppDefinition): PricingTier | undefined {
   return app.pricing.find((tier) => tier.amountUsd > 0);
 }
 
-/** Format a USD amount for the given locale (whole dollars, e.g. "$29"). */
+/** Format a USD amount for the given locale (whole dollars, e.g. "$14"). */
 export function formatUsd(amount: number, locale: string): string {
   return new Intl.NumberFormat(locale, {
     style: "currency",

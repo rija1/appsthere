@@ -44,9 +44,9 @@ export const posts: BlogPost[] = [
             "六个 Whisper 模型（从 Tiny 到 Large-v3）、带播放同步高亮的编辑器、搜索与时间戳导航，以及 TXT、Markdown、SRT、WebVTT、JSON 导出。应用运行在沙盒中、经过加固、零遥测。",
           ),
           l(
-            "The Free version is genuinely useful — four models, every export format, the full editor. Pro adds the Turbo and Large-v3 models for maximum accuracy, for a one-time $29. No subscription; that's a principle, not a promotion.",
-            "La version gratuite est réellement utile — quatre modèles, tous les formats d'export, l'éditeur complet. Pro ajoute les modèles Turbo et Large-v3 pour une précision maximale, pour 29 $ une seule fois. Pas d'abonnement : c'est un principe, pas une promotion.",
-            "免费版真正可用——四个模型、全部导出格式、完整编辑器。专业版增加 Turbo 和 Large-v3 模型以获得最高精度，一次性 29 美元。没有订阅——这是原则，不是促销。",
+            "The Free version is genuinely useful — four models, every export format, the full editor. Pro adds the Turbo and Large-v3 models for maximum accuracy, for a one-time $14. No subscription; that's a principle, not a promotion.",
+            "La version gratuite est réellement utile — quatre modèles, tous les formats d'export, l'éditeur complet. Pro ajoute les modèles Turbo et Large-v3 pour une précision maximale, pour 14 $ une seule fois. Pas d'abonnement : c'est un principe, pas une promotion.",
+            "免费版真正可用——四个模型、全部导出格式、完整编辑器。专业版增加 Turbo 和 Large-v3 模型以获得最高精度，一次性 14 美元。没有订阅——这是原则，不是促销。",
           ),
         ],
       },

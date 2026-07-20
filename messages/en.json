@@ -30,8 +30,8 @@
   },
   "hero": {
     "badge": "Lumiso Transcribe 1.0 is out",
-    "title": "Software you'll actually enjoy using.",
-    "subtitle": "We build fast, elegant desktop applications that help people get work done — private by design, fairly priced, and a pleasure to open.",
+    "title": "From recording to transcript, entirely offline.",
+    "subtitle": "Lumiso Transcribe turns audio and video into accurate transcripts — powered by Whisper, running entirely on your Mac. No uploads, ever.",
     "socialProof": "No subscriptions. No accounts. No telemetry."
   },
   "why": {

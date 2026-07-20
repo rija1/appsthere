@@ -139,11 +139,11 @@ sans impact.
 2. **Checkout settings → Website approval** : soumettre le domaine.
    Paddle vérifie la présence des pages légales — elles existent déjà :
    `/legal/terms`, `/legal/privacy`, `/legal/refunds`.
-3. Créer le produit *Lumiso Transcribe Pro* + prix one-time 29 USD →
+3. Créer le produit *Lumiso Transcribe Pro* + prix one-time 14 USD →
    copier l'ID `pri_…` dans `NEXT_PUBLIC_PADDLE_PRICE_LUMISO_PRO`.
 4. **Rebuild obligatoire** après tout changement de variable
    `NEXT_PUBLIC_*` : `npm run build` puis Restart App (voir §7).
-5. Test de bout en bout : achat réel à 29 $ avec votre propre carte →
+5. Test de bout en bout : achat réel à 14 $ avec votre propre carte →
    email de licence reçu → activation dans l'app → remboursement depuis
    le dashboard Paddle.
 

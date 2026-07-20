@@ -1,14 +1,17 @@
-import { ArrowRight } from "lucide-react";
-import { getTranslations } from "next-intl/server";
+import { ArrowDownToLine, ArrowRight } from "lucide-react";
+import { getLocale, getTranslations } from "next-intl/server";
 import { HeroMockup } from "@/components/mockups/hero-mockup";
 import { Reveal } from "@/components/motion/reveal";
+import { BuyButton } from "@/components/paddle/buy-button";
 import { Badge } from "@/components/ui/badge";
 import { buttonVariants } from "@/components/ui/button";
+import { lumisoTranscribe } from "@/content/apps/lumiso-transcribe";
 import { Link } from "@/i18n/navigation";
-import { cn } from "@/lib/utils";
+import { formatUsd, paidTierOf } from "@/lib/pricing";
 
 export async function Hero() {
-  const t = await getTranslations();
+  const [t, locale] = await Promise.all([getTranslations(), getLocale()]);
+  const paidTier = paidTierOf(lumisoTranscribe);
 
   return (
     <section className="relative overflow-hidden">
@@ -51,18 +54,24 @@ export async function Hero() {
           </Reveal>
 
           <Reveal delay={0.24} className="flex flex-wrap items-center gap-3">
-            <Link
-              href="/apps/lumiso-transcribe"
+            <a
+              href={lumisoTranscribe.downloadUrl}
               className={buttonVariants({ size: "lg" })}
             >
-              {t("common.download")}
-            </Link>
-            <Link
-              href="/apps"
-              className={cn(buttonVariants({ variant: "secondary", size: "lg" }))}
-            >
-              {t("common.browseApps")}
-            </Link>
+              <ArrowDownToLine className="size-4" aria-hidden />
+              {t("common.downloadFree")}
+            </a>
+            {paidTier ? (
+              <BuyButton
+                priceId={lumisoTranscribe.paddlePriceId}
+                label={t("appPage.buyProFor", {
+                  price: formatUsd(paidTier.amountUsd, locale),
+                })}
+                unavailableLabel={t("appPage.checkoutUnavailable")}
+                variant="secondary"
+                size="lg"
+              />
+            ) : null}
           </Reveal>
 
           <Reveal delay={0.32}>

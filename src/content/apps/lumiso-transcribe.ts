@@ -235,7 +235,7 @@ export const lumisoTranscribe: AppDefinition = {
     {
       id: "pro",
       name: l("Pro", "Pro", "专业版"),
-      amountUsd: 29,
+      amountUsd: 14,
       billing: "one-time",
       description: l(
         "Maximum accuracy for work that matters. Pay once, keep it forever.",
