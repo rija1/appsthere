@@ -23,9 +23,9 @@ export const lumisoTranscribe: AppDefinition = {
     "将录音和视频转换为精准的文字稿和字幕——全部在你的 Mac 本地处理，绝不上传。",
   ),
   longDescription: l(
-    "Lumiso Transcribe is a native macOS app built on Whisper with Metal acceleration. Drag in a recording, pick a model, and get a polished transcript you can edit, search, and export as TXT, Markdown, SRT, WebVTT, or JSON. Your audio never touches a server — interviews, meetings, and drafts stay yours.",
-    "Lumiso Transcribe est une application macOS native fondée sur Whisper avec accélération Metal. Glissez un enregistrement, choisissez un modèle, et obtenez une transcription soignée que vous pouvez éditer, rechercher et exporter en TXT, Markdown, SRT, WebVTT ou JSON. Votre audio ne touche jamais un serveur — vos entretiens, réunions et brouillons restent à vous.",
-    "Lumiso Transcribe 是一款基于 Whisper 并采用 Metal 加速的原生 macOS 应用。拖入录音，选择模型，即可得到可编辑、可搜索的精美文字稿，并导出为 TXT、Markdown、SRT、WebVTT 或 JSON。你的音频永远不会经过服务器——访谈、会议和草稿始终属于你。",
+    "Transcription doesn't need to be complicated. Drag a file into Lumiso Transcribe, pick a quality level, and get a transcript ready to edit and share, without ever leaving your Mac.",
+    "La transcription n'a pas besoin d'être compliquée. Glissez un fichier dans Lumiso Transcribe, choisissez un niveau de qualité, et obtenez une transcription prête à éditer et à partager, sans jamais quitter votre Mac.",
+    "转写不必如此复杂。将文件拖入 Lumiso Transcribe，选择一个质量等级，即可获得可编辑、可分享的文字稿，全部在你的 Mac 上完成。",
   ),
 
   platforms: ["macOS 14+"],
