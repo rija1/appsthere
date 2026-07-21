@@ -1,4 +1,4 @@
-import { ArrowDownToLine, Check } from "lucide-react";
+import { ArrowDownToLine, Check, ShieldCheck } from "lucide-react";
 import { getLocale, getTranslations } from "next-intl/server";
 import { RevealGroup, RevealItem } from "@/components/motion/reveal";
 import { BuyButton } from "@/components/paddle/buy-button";
@@ -89,6 +89,11 @@ export async function AppPricing({ app }: { app: AppDefinition }) {
           </RevealItem>
         ))}
       </RevealGroup>
+
+      <p className="mx-auto mt-6 flex max-w-3xl items-center justify-center gap-1.5 text-center text-xs text-muted-foreground">
+        <ShieldCheck className="size-3.5 shrink-0" aria-hidden />
+        {t("appPage.paddleDisclosure")}
+      </p>
     </section>
   );
 }
