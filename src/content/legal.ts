@@ -53,9 +53,9 @@ export const legalDocs: LegalDoc[] = [
         heading: l("When you purchase", "Lors d'un achat", "购买时"),
         paragraphs: [
           l(
-            "Purchases are processed by Paddle.com, our merchant of record. Paddle collects the billing information required to complete the transaction under its own privacy policy. We receive your email address and order details so we can issue your license key and provide support — nothing more. License keys embed the purchase email so the license can be verified offline.",
-            "Les achats sont traités par Paddle.com, notre revendeur officiel. Paddle collecte les informations de facturation nécessaires à la transaction selon sa propre politique de confidentialité. Nous recevons votre adresse e-mail et le détail de la commande afin d'émettre votre clé de licence et d'assurer le support — rien de plus. Les clés de licence contiennent l'e-mail d'achat pour permettre une vérification hors ligne.",
-            "购买由我们的官方经销商 Paddle.com 处理。Paddle 根据其自身的隐私政策收集完成交易所需的账单信息。我们仅收到你的邮箱地址和订单详情，用于签发许可证密钥和提供支持——仅此而已。许可证密钥内嵌购买邮箱，以便离线验证许可证。",
+            "Pro upgrades are sold as an in-app purchase handled entirely by Apple through the App Store. Payment is processed by Apple under its own privacy policy; we never see your payment details and receive no personal information about you. The app checks your purchase status through Apple's own on-device receipt system — there is no license key, no account, and no purchase data of any kind on our servers, because we don't operate any.",
+            "Les mises à niveau Pro sont vendues sous forme d'achat intégré, entièrement géré par Apple via l'App Store. Le paiement est traité par Apple selon sa propre politique de confidentialité ; nous ne voyons jamais vos informations de paiement et ne recevons aucune information personnelle vous concernant. L'application vérifie votre statut d'achat via le système de reçus propre à Apple, sur l'appareil — il n'y a ni clé de licence, ni compte, ni donnée d'achat sur nos serveurs, puisque nous n'en exploitons aucun.",
+            "专业版升级作为应用内购买销售，完全由 Apple 通过 App Store 处理。付款由 Apple 根据其自身的隐私政策处理；我们从不接触你的付款信息，也不会收到任何与你相关的个人信息。应用通过 Apple 自有的设备端收据系统核实购买状态——没有许可证密钥，没有账号，我们的服务器上也没有任何购买数据，因为我们根本不运营任何服务器。",
           ),
         ],
       },
@@ -63,9 +63,9 @@ export const legalDocs: LegalDoc[] = [
         heading: l("Your rights", "Vos droits", "你的权利"),
         paragraphs: [
           l(
-            "You may request access to, correction of, or deletion of the personal data we hold (your email address and order history) at any time by writing to support@appsthere.com. Deleting your data does not invalidate licenses you have already purchased.",
-            "Vous pouvez demander l'accès, la rectification ou la suppression des données personnelles que nous détenons (votre adresse e-mail et l'historique de commandes) à tout moment en écrivant à support@appsthere.com. La suppression de vos données n'invalide pas les licences déjà achetées.",
-            "你可以随时写信至 support@appsthere.com，要求访问、更正或删除我们持有的个人数据（你的邮箱地址和订单历史）。删除数据不会使你已购买的许可证失效。",
+            "Because we hold no personal data about you — no account, no email address, no purchase or order history — there is nothing on our side to access, correct, or delete. Your Apple Account and its purchase history are managed entirely by Apple; you can review or request deletion of that information through your Apple Account settings.",
+            "Comme nous ne détenons aucune donnée personnelle vous concernant — ni compte, ni adresse e-mail, ni historique d'achat ou de commande — il n'y a rien de notre côté à consulter, corriger ou supprimer. Votre identifiant Apple et son historique d'achats sont entièrement gérés par Apple ; vous pouvez consulter ou demander la suppression de ces informations depuis les réglages de votre identifiant Apple.",
+            "由于我们不持有任何与你相关的个人数据——没有账号、没有邮箱地址、没有购买或订单历史——我们这边没有任何数据可供查阅、更正或删除。你的 Apple 账户及其购买历史完全由 Apple 管理；你可以通过 Apple 账户设置查阅或申请删除这些信息。",
           ),
         ],
       },
