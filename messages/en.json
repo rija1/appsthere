@@ -2,8 +2,6 @@
   "common": {
     "brand": "AppsThere",
     "download": "Download",
-    "downloadFree": "Download free",
-    "buyPro": "Buy Pro",
     "learnMore": "Learn more",
     "browseApps": "Browse apps",
     "free": "Free",
@@ -11,7 +9,9 @@
     "version": "Version {version}",
     "forPlatform": "for {platform}",
     "new": "New",
-    "backHome": "Back to home"
+    "backHome": "Back to home",
+    "viewOnAppStore": "View on the App Store",
+    "unlockPro": "Unlock Pro"
   },
   "nav": {
     "apps": "Apps",
@@ -130,16 +130,12 @@
     "featuresTitle": "Everything you need, nothing you don't",
     "pricingTitle": "Simple, fair pricing",
     "pricingSubtitle": "Start free. Upgrade once. Own it forever.",
-    "paddleDisclosure": "Payments are securely processed by Paddle.com, our authorized reseller and merchant of record.",
     "faqTitle": "Frequently asked questions",
     "requirementsTitle": "System requirements",
     "changelogTitle": "Changelog",
     "reviewsTitle": "What early users say",
     "downloadTitle": "Get {name}",
-    "downloadSubtitle": "Free download, no account required. Upgrade to Pro whenever you're ready.",
-    "fileInfo": "{size} MB · macOS 14+ · Notarized by Apple",
-    "checkoutUnavailable": "Checkout is being configured — check back shortly.",
-    "buyProFor": "Buy Pro — {price}",
+    "downloadSubtitle": "Free to download and use. Unlock Pro anytime with a one-time purchase through the App Store.",
     "released": "Released",
     "updated": "Updated",
     "category": "Category",
@@ -147,7 +143,9 @@
     "categoryMedia": "Media",
     "categoryUtilities": "Utilities",
     "lightboxClose": "Close",
-    "openScreenshot": "View screenshot: {title}"
+    "openScreenshot": "View screenshot: {title}",
+    "appStoreComingSoon": "Coming soon to the App Store",
+    "paymentDisclosure": "Payments are processed securely by Apple through the App Store."
   },
   "blog": {
     "metaTitle": "Blog",

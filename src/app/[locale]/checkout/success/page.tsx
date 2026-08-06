@@ -69,7 +69,11 @@ export default async function CheckoutSuccessPage({
       </Reveal>
 
       <Reveal delay={0.2} className="flex flex-col items-center gap-4 pt-10">
-        <a href={lumisoTranscribe.downloadUrl} className={buttonVariants({ size: "lg" })}>
+        {/* Unreachable: nothing links to this page since checkout moved to
+            the App Store (see AppDefinition.appStoreUrl). Kept compiling,
+            not maintained — see task #18 in the site cleanup for the call
+            on deleting the whole Paddle checkout flow. */}
+        <a href={`/apps/${pureScribe.slug}`} className={buttonVariants({ size: "lg" })}>
           <ArrowDownToLine className="size-4" aria-hidden />
           {t("downloadApp")}
         </a>

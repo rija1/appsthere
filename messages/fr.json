@@ -2,8 +2,6 @@
   "common": {
     "brand": "AppsThere",
     "download": "Télécharger",
-    "downloadFree": "Télécharger gratuitement",
-    "buyPro": "Acheter Pro",
     "learnMore": "En savoir plus",
     "browseApps": "Voir les apps",
     "free": "Gratuit",
@@ -11,7 +9,9 @@
     "version": "Version {version}",
     "forPlatform": "pour {platform}",
     "new": "Nouveau",
-    "backHome": "Retour à l'accueil"
+    "backHome": "Retour à l'accueil",
+    "viewOnAppStore": "Voir sur l'App Store",
+    "unlockPro": "Débloquer Pro"
   },
   "nav": {
     "apps": "Apps",
@@ -130,16 +130,12 @@
     "featuresTitle": "Tout le nécessaire, rien de superflu",
     "pricingTitle": "Un prix simple et juste",
     "pricingSubtitle": "Commencez gratuitement. Payez une fois. Gardez pour toujours.",
-    "paddleDisclosure": "Les paiements sont traités de façon sécurisée par Paddle.com, notre revendeur officiel et responsable de la vente.",
     "faqTitle": "Questions fréquentes",
     "requirementsTitle": "Configuration requise",
     "changelogTitle": "Journal des versions",
     "reviewsTitle": "Ce qu'en disent les premiers utilisateurs",
     "downloadTitle": "Obtenir {name}",
-    "downloadSubtitle": "Téléchargement gratuit, sans compte. Passez à Pro quand vous voulez.",
-    "fileInfo": "{size} Mo · macOS 14+ · Notarié par Apple",
-    "checkoutUnavailable": "Le paiement est en cours de configuration — revenez bientôt.",
-    "buyProFor": "Acheter Pro — {price}",
+    "downloadSubtitle": "Téléchargement et utilisation gratuits. Débloquez Pro à tout moment via un achat unique sur l'App Store.",
     "released": "Sortie",
     "updated": "Mise à jour",
     "category": "Catégorie",
@@ -147,7 +143,9 @@
     "categoryMedia": "Média",
     "categoryUtilities": "Utilitaires",
     "lightboxClose": "Fermer",
-    "openScreenshot": "Voir la capture : {title}"
+    "openScreenshot": "Voir la capture : {title}",
+    "appStoreComingSoon": "Bientôt sur l'App Store",
+    "paymentDisclosure": "Les paiements sont traités de façon sécurisée par Apple via l'App Store."
   },
   "blog": {
     "metaTitle": "Blog",

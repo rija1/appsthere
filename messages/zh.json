@@ -2,8 +2,6 @@
   "common": {
     "brand": "AppsThere",
     "download": "下载",
-    "downloadFree": "免费下载",
-    "buyPro": "购买专业版",
     "learnMore": "了解更多",
     "browseApps": "浏览应用",
     "free": "免费",
@@ -11,7 +9,9 @@
     "version": "版本 {version}",
     "forPlatform": "适用于 {platform}",
     "new": "新",
-    "backHome": "返回首页"
+    "backHome": "返回首页",
+    "viewOnAppStore": "在 App Store 查看",
+    "unlockPro": "解锁专业版"
   },
   "nav": {
     "apps": "应用",
@@ -130,16 +130,12 @@
     "featuresTitle": "所需俱全，别无冗余",
     "pricingTitle": "简单公道的定价",
     "pricingSubtitle": "免费开始。一次付费。永久拥有。",
-    "paddleDisclosure": "支付由我们的官方经销商及销售责任方 Paddle.com 安全处理。",
     "faqTitle": "常见问题",
     "requirementsTitle": "系统要求",
     "changelogTitle": "更新日志",
     "reviewsTitle": "早期用户怎么说",
     "downloadTitle": "获取 {name}",
-    "downloadSubtitle": "免费下载，无需账号。随时升级到专业版。",
-    "fileInfo": "{size} MB · macOS 14+ · 已经 Apple 公证",
-    "checkoutUnavailable": "支付正在配置中——请稍后再来。",
-    "buyProFor": "购买专业版 — {price}",
+    "downloadSubtitle": "免费下载和使用。随时通过 App Store 一次性购买解锁专业版。",
     "released": "发布日期",
     "updated": "更新日期",
     "category": "分类",
@@ -147,7 +143,9 @@
     "categoryMedia": "媒体",
     "categoryUtilities": "工具",
     "lightboxClose": "关闭",
-    "openScreenshot": "查看截图：{title}"
+    "openScreenshot": "查看截图：{title}",
+    "appStoreComingSoon": "即将登陆 App Store",
+    "paymentDisclosure": "支付由 Apple 通过 App Store 安全处理。"
   },
   "blog": {
     "metaTitle": "博客",

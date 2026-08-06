@@ -102,13 +102,17 @@ export interface AppDefinition {
   updatedAt: string;
   status: "available" | "coming-soon";
   heroScene: MockupScene;
-  /** Product ID embedded in signed license payloads (must match the app). */
+  /** The app's in-app-purchase product ID (must match the app's StoreKit config). */
   licenseProductID: string;
-  /** Paddle price ID for the paid tier; undefined until configured. */
-  paddlePriceId: string | undefined;
-  /** Direct-download URL for the free build. */
-  downloadUrl: string;
-  fileSizeMb: number;
+  /**
+   * Legacy Paddle price ID from the direct-distribution era. All apps now
+   * sell exclusively through the App Store, so this is never set for any
+   * current app — kept only so `/api/paddle/webhook` (dormant, unused)
+   * still type-checks. Safe to delete together with that route.
+   */
+  paddlePriceId?: string;
+  /** Link to the app's App Store listing. Undefined until it clears App Review. */
+  appStoreUrl?: string;
   features: AppFeature[];
   featureBlocks: FeatureBlock[];
   screenshots: AppScreenshot[];

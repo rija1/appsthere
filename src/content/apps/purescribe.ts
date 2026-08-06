@@ -1,46 +1,47 @@
 import { l, type AppDefinition } from "@/content/types";
 
 /**
- * Lumiso Transcribe — native macOS transcription, entirely on-device.
+ * PureScribe — native transcription for Mac, iPhone and iPad, entirely on-device.
  *
- * Facts here mirror the app source (LumisoTranscribe repo): model catalog
- * and Pro gating from `ModelCatalog`, license product ID from
- * `LicenseVerifier.expectedProductID`, requirements from the README.
+ * Facts here mirror the app source (PureScribe repo): model catalog
+ * and Pro gating from `ModelCatalog`, IAP product ID from
+ * `LicenseManager.proProductID`, requirements from the README.
  */
-export const lumisoTranscribe: AppDefinition = {
-  slug: "lumiso-transcribe",
-  name: "Lumiso Transcribe",
+export const pureScribe: AppDefinition = {
+  slug: "purescribe",
+  name: "PureScribe",
   category: "productivity",
 
   tagline: l(
-    "Audio in. Transcript out. Nothing leaves your Mac.",
-    "De l'audio au texte. Rien ne quitte votre Mac.",
-    "音频进，文稿出。一切都在你的 Mac 上完成。",
+    "Audio in. Transcript out. Nothing leaves your device.",
+    "De l'audio au texte. Rien ne quitte votre appareil.",
+    "音频进，文稿出。一切都在你的设备上完成。",
   ),
   shortDescription: l(
-    "Turn recordings and videos into accurate transcripts and subtitles — processed entirely on your Mac, with zero uploads.",
-    "Transformez enregistrements et vidéos en transcriptions et sous-titres précis — traités entièrement sur votre Mac, sans aucun envoi.",
-    "将录音和视频转换为精准的文字稿和字幕——全部在你的 Mac 本地处理，绝不上传。",
+    "Turn recordings and videos into accurate transcripts and subtitles — processed entirely on your device, with zero uploads.",
+    "Transformez enregistrements et vidéos en transcriptions et sous-titres précis — traités entièrement sur votre appareil, sans aucun envoi.",
+    "将录音和视频转换为精准的文字稿和字幕——全部在你的设备本地处理，绝不上传。",
   ),
   longDescription: l(
-    "Transcription doesn't need to be complicated. Drag a file into Lumiso Transcribe, pick a quality level, and get a transcript ready to edit and share, without ever leaving your Mac.",
-    "La transcription n'a pas besoin d'être compliquée. Glissez un fichier dans Lumiso Transcribe, choisissez un niveau de qualité, et obtenez une transcription prête à éditer et à partager, sans jamais quitter votre Mac.",
-    "转写不必如此复杂。将文件拖入 Lumiso Transcribe，选择一个质量等级，即可获得可编辑、可分享的文字稿，全部在你的 Mac 上完成。",
+    "Transcription doesn't need to be complicated. Drag a file into PureScribe, pick a quality level, and get a transcript ready to edit and share, without ever leaving your device.",
+    "La transcription n'a pas besoin d'être compliquée. Glissez un fichier dans PureScribe, choisissez un niveau de qualité, et obtenez une transcription prête à éditer et à partager, sans jamais quitter votre appareil.",
+    "转写不必如此复杂。将文件拖入 PureScribe，选择一个质量等级，即可获得可编辑、可分享的文字稿，全部在你的设备上完成。",
   ),
 
-  platforms: ["macOS 14+"],
+  platforms: ["macOS 14+", "iOS 17+", "iPadOS 17+"],
   version: "1.0.0",
   releasedAt: "2026-07-17",
-  updatedAt: "2026-07-17",
+  updatedAt: "2026-08-06",
   status: "available",
   heroScene: "editor",
 
-  licenseProductID: "com.lumiso.transcribe",
-  paddlePriceId: process.env.NEXT_PUBLIC_PADDLE_PRICE_LUMISO_PRO,
-  downloadUrl:
-    process.env.NEXT_PUBLIC_DOWNLOAD_URL_LUMISO ??
-    "https://downloads.appsthere.com/lumiso-transcribe/LumisoTranscribe-1.0.0.dmg",
-  fileSizeMb: 38,
+  licenseProductID: "com.purescribe.app",
+  // Real App Store Connect app ID, confirmed via the 6 Aug 2026 upload
+  // (bundle com.purescribe.app, "PureScribe - Speech to Text"). Flip this
+  // on once the app has actually cleared App Review — apps.apple.com
+  // 404s for an app that isn't live yet.
+  // appStoreUrl: "https://apps.apple.com/app/id6797195935",
+  appStoreUrl: undefined,
 
   features: [
     {
@@ -48,9 +49,9 @@ export const lumisoTranscribe: AppDefinition = {
       icon: "lock",
       title: l("100% on-device", "100 % local", "完全本地运行"),
       description: l(
-        "Transcription runs on your Mac with Metal acceleration. No account, no cloud, no telemetry.",
-        "La transcription s'exécute sur votre Mac avec l'accélération Metal. Pas de compte, pas de cloud, pas de télémétrie.",
-        "转写在你的 Mac 上通过 Metal 加速完成。无需账号，没有云端，没有遥测。",
+        "Transcription runs entirely on your device with Metal acceleration. No account, no cloud, no telemetry.",
+        "La transcription s'exécute entièrement sur votre appareil avec l'accélération Metal. Pas de compte, pas de cloud, pas de télémétrie.",
+        "转写完全在你的设备上通过 Metal 加速完成。无需账号，没有云端，没有遥测。",
       ),
     },
     {
@@ -246,7 +247,7 @@ export const lumisoTranscribe: AppDefinition = {
         l("Everything in Free", "Tout ce qui est dans Gratuit", "包含免费版全部功能"),
         l("Turbo model — near-flagship accuracy, far faster", "Modèle Turbo — précision quasi maximale, bien plus rapide", "Turbo 模型——接近旗舰精度，速度快数倍"),
         l("Large-v3 model — maximum accuracy", "Modèle Large-v3 — précision maximale", "Large-v3 模型——最高精度"),
-        l("License verified offline — no activation server", "Licence vérifiée hors ligne — aucun serveur d'activation", "许可证离线验证——无需激活服务器"),
+        l("Bought once, unlocked everywhere — Mac, iPhone and iPad share the same purchase", "Acheté une fois, débloqué partout — Mac, iPhone et iPad partagent le même achat", "一次购买，随处解锁——Mac、iPhone 和 iPad 共享同一次购买"),
         l("Free updates for all 1.x releases", "Mises à jour gratuites pour toutes les versions 1.x", "1.x 全系列免费更新"),
       ],
       cta: "buy",
@@ -284,14 +285,14 @@ export const lumisoTranscribe: AppDefinition = {
     {
       id: "faq-license",
       question: l(
-        "How does the license work?",
-        "Comment fonctionne la licence ?",
-        "许可证如何运作？",
+        "How does Pro unlock work?",
+        "Comment fonctionne le déblocage Pro ?",
+        "专业版如何解锁？",
       ),
       answer: l(
-        "After purchase you receive a license key by email. Paste it into Settings → License and you're done — the key is a cryptographically signed token the app verifies offline, so there's no activation server, no account, and it keeps working without an internet connection.",
-        "Après l'achat, vous recevez une clé de licence par e-mail. Collez-la dans Réglages → Licence et c'est terminé — la clé est un jeton signé cryptographiquement que l'application vérifie hors ligne : pas de serveur d'activation, pas de compte, et elle continue de fonctionner sans connexion internet.",
-        "购买后你会通过电子邮件收到许可证密钥。将其粘贴到「设置 → 许可证」即可——密钥是经过加密签名的令牌，应用在本地离线验证，因此没有激活服务器、无需账号，断网也能正常使用。",
+        "Pro is a one-time in-app purchase billed by Apple through the App Store — there's no license key, no account, and no activation step. Buy it once and it's unlocked on every Mac, iPhone and iPad signed into the same Apple Account: just open Settings → Pro and tap Restore Purchases.",
+        "Pro est un achat intégré unique, facturé par Apple via l'App Store — il n'y a ni clé de licence, ni compte, ni étape d'activation. Achetez-le une fois et il est débloqué sur tous les Mac, iPhone et iPad connectés au même identifiant Apple : ouvrez simplement Réglages → Pro et appuyez sur Restaurer les achats.",
+        "专业版是通过 App Store 由 Apple 计费的一次性应用内购买——没有许可证密钥，无需账号，也不需要激活步骤。购买一次，即可在登录同一 Apple 账户的所有 Mac、iPhone 和 iPad 上解锁：只需打开「设置 → 专业版」并点按「恢复购买」。",
       ),
     },
     {
@@ -315,9 +316,9 @@ export const lumisoTranscribe: AppDefinition = {
         "如果不适合我怎么办？",
       ),
       answer: l(
-        "Try the Free version first — it's the same app with the same editor and exports. If you buy Pro and it isn't right for you, email us within 14 days for a full refund, no questions asked.",
-        "Essayez d'abord la version gratuite — c'est la même application, avec le même éditeur et les mêmes exports. Si vous achetez Pro et qu'il ne vous convient pas, écrivez-nous sous 14 jours pour un remboursement intégral, sans justification.",
-        "请先试用免费版——它就是同一款应用，编辑器和导出功能完全相同。如果购买专业版后觉得不合适，14 天内发邮件给我们即可全额退款，无需任何理由。",
+        "Try the Free version first — it's the same app with the same editor and exports. If you buy Pro and it isn't right for you, Apple handles refunds for all App Store purchases directly: go to reportaproblem.apple.com, or Settings → your name → Media & Purchases → your purchase history on your device.",
+        "Essayez d'abord la version gratuite — c'est la même application, avec le même éditeur et les mêmes exports. Si vous achetez Pro et qu'il ne vous convient pas, c'est Apple qui gère directement les remboursements pour tous les achats effectués sur l'App Store : rendez-vous sur reportaproblem.apple.com, ou Réglages → votre nom → Média et achats → votre historique d'achats sur votre appareil.",
+        "请先试用免费版——它就是同一款应用，编辑器和导出功能完全相同。如果购买专业版后觉得不合适，所有 App Store 购买的退款均由 Apple 直接处理：请访问 reportaproblem.apple.com，或在设备上前往「设置 → 你的姓名 → 媒体与购买项目 → 购买历史记录」。",
       ),
     },
     {
@@ -339,15 +340,19 @@ export const lumisoTranscribe: AppDefinition = {
     {
       id: "req-os",
       label: l("Operating system", "Système d'exploitation", "操作系统"),
-      value: l("macOS 14 Sonoma or newer", "macOS 14 Sonoma ou plus récent", "macOS 14 Sonoma 或更新版本"),
+      value: l(
+        "macOS 14 Sonoma+, iOS 17+, or iPadOS 17+",
+        "macOS 14 Sonoma+, iOS 17+ ou iPadOS 17+",
+        "macOS 14 Sonoma 及以上、iOS 17 及以上，或 iPadOS 17 及以上",
+      ),
     },
     {
       id: "req-chip",
-      label: l("Processor", "Processeur", "处理器"),
+      label: l("Processor (Mac)", "Processeur (Mac)", "处理器（Mac）"),
       value: l(
-        "Apple Silicon recommended · Intel supported",
-        "Apple Silicon recommandé · Intel pris en charge",
-        "推荐 Apple Silicon · 支持 Intel",
+        "Apple Silicon recommended · Intel Macs supported",
+        "Apple Silicon recommandé · Mac Intel pris en charge",
+        "推荐 Apple Silicon · 支持 Intel Mac",
       ),
     },
     {

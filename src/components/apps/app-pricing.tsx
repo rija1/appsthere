@@ -1,9 +1,8 @@
-import { ArrowDownToLine, Check, ShieldCheck } from "lucide-react";
+import { Check, ShieldCheck } from "lucide-react";
 import { getLocale, getTranslations } from "next-intl/server";
+import { AppStoreCta } from "@/components/app-store-cta";
 import { RevealGroup, RevealItem } from "@/components/motion/reveal";
-import { BuyButton } from "@/components/paddle/buy-button";
 import { SectionHeading } from "@/components/section-heading";
-import { buttonVariants } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import type { AppDefinition } from "@/content/types";
 import { pick } from "@/content/types";
@@ -65,26 +64,14 @@ export async function AppPricing({ app }: { app: AppDefinition }) {
                 ))}
               </ul>
 
-              {tier.cta === "buy" ? (
-                <BuyButton
-                  priceId={app.paddlePriceId}
-                  label={t("common.buyPro")}
-                  unavailableLabel={t("appPage.checkoutUnavailable")}
-                  size="md"
-                  className="w-full"
-                />
-              ) : (
-                <a
-                  href={app.downloadUrl}
-                  className={cn(
-                    buttonVariants({ variant: "secondary" }),
-                    "w-full",
-                  )}
-                >
-                  <ArrowDownToLine className="size-4" aria-hidden />
-                  {t("common.downloadFree")}
-                </a>
-              )}
+              <AppStoreCta
+                appStoreUrl={app.appStoreUrl}
+                label={tier.cta === "buy" ? t("common.unlockPro") : t("common.viewOnAppStore")}
+                comingSoonLabel={t("appPage.appStoreComingSoon")}
+                variant={tier.cta === "buy" ? "primary" : "secondary"}
+                size="md"
+                className="w-full"
+              />
             </Card>
           </RevealItem>
         ))}
@@ -92,7 +79,7 @@ export async function AppPricing({ app }: { app: AppDefinition }) {
 
       <p className="mx-auto mt-6 flex max-w-3xl items-center justify-center gap-1.5 text-center text-xs text-muted-foreground">
         <ShieldCheck className="size-3.5 shrink-0" aria-hidden />
-        {t("appPage.paddleDisclosure")}
+        {t("appPage.paymentDisclosure")}
       </p>
     </section>
   );

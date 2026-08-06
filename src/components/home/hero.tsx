@@ -1,17 +1,14 @@
-import { ArrowDownToLine, ArrowRight } from "lucide-react";
-import { getLocale, getTranslations } from "next-intl/server";
+import { ArrowRight } from "lucide-react";
+import { getTranslations } from "next-intl/server";
+import { AppStoreCta } from "@/components/app-store-cta";
 import { HeroMockup } from "@/components/mockups/hero-mockup";
 import { Reveal } from "@/components/motion/reveal";
-import { BuyButton } from "@/components/paddle/buy-button";
 import { Badge } from "@/components/ui/badge";
-import { buttonVariants } from "@/components/ui/button";
 import { lumisoTranscribe } from "@/content/apps/lumiso-transcribe";
 import { Link } from "@/i18n/navigation";
-import { formatUsd, paidTierOf } from "@/lib/pricing";
 
 export async function Hero() {
-  const [t, locale] = await Promise.all([getTranslations(), getLocale()]);
-  const paidTier = paidTierOf(lumisoTranscribe);
+  const t = await getTranslations();
 
   return (
     <section className="relative overflow-hidden">
@@ -54,24 +51,12 @@ export async function Hero() {
           </Reveal>
 
           <Reveal delay={0.24} className="flex flex-wrap items-center gap-3">
-            <a
-              href={lumisoTranscribe.downloadUrl}
-              className={buttonVariants({ size: "lg" })}
-            >
-              <ArrowDownToLine className="size-4" aria-hidden />
-              {t("common.downloadFree")}
-            </a>
-            {paidTier ? (
-              <BuyButton
-                priceId={lumisoTranscribe.paddlePriceId}
-                label={t("appPage.buyProFor", {
-                  price: formatUsd(paidTier.amountUsd, locale),
-                })}
-                unavailableLabel={t("appPage.checkoutUnavailable")}
-                variant="secondary"
-                size="lg"
-              />
-            ) : null}
+            <AppStoreCta
+              appStoreUrl={lumisoTranscribe.appStoreUrl}
+              label={t("common.viewOnAppStore")}
+              comingSoonLabel={t("appPage.appStoreComingSoon")}
+              size="lg"
+            />
           </Reveal>
 
           <Reveal delay={0.32}>

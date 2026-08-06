@@ -1,17 +1,13 @@
-import { ArrowDownToLine } from "lucide-react";
 import { getLocale, getTranslations } from "next-intl/server";
+import { AppStoreCta } from "@/components/app-store-cta";
 import { HeroMockup } from "@/components/mockups/hero-mockup";
 import { Reveal } from "@/components/motion/reveal";
-import { BuyButton } from "@/components/paddle/buy-button";
 import { Badge } from "@/components/ui/badge";
-import { buttonVariants } from "@/components/ui/button";
 import type { AppDefinition } from "@/content/types";
 import { pick } from "@/content/types";
-import { formatUsd, paidTierOf } from "@/lib/pricing";
 
 export async function AppHero({ app }: { app: AppDefinition }) {
   const [t, locale] = await Promise.all([getTranslations(), getLocale()]);
-  const paidTier = paidTierOf(app);
 
   return (
     <section className="relative overflow-hidden">
@@ -51,27 +47,12 @@ export async function AppHero({ app }: { app: AppDefinition }) {
           </Reveal>
 
           <Reveal delay={0.24} className="flex flex-wrap items-center gap-3">
-            <a href={app.downloadUrl} className={buttonVariants({ size: "lg" })}>
-              <ArrowDownToLine className="size-4" aria-hidden />
-              {t("common.downloadFree")}
-            </a>
-            {paidTier ? (
-              <BuyButton
-                priceId={app.paddlePriceId}
-                label={t("appPage.buyProFor", {
-                  price: formatUsd(paidTier.amountUsd, locale),
-                })}
-                unavailableLabel={t("appPage.checkoutUnavailable")}
-                variant="secondary"
-                size="lg"
-              />
-            ) : null}
-          </Reveal>
-
-          <Reveal delay={0.3}>
-            <p className="font-mono text-xs uppercase tracking-[0.16em] text-muted-foreground">
-              {t("appPage.fileInfo", { size: app.fileSizeMb })}
-            </p>
+            <AppStoreCta
+              appStoreUrl={app.appStoreUrl}
+              label={t("common.viewOnAppStore")}
+              comingSoonLabel={t("appPage.appStoreComingSoon")}
+              size="lg"
+            />
           </Reveal>
         </div>
 

@@ -1,14 +1,10 @@
-import { ArrowDownToLine } from "lucide-react";
-import { getLocale, getTranslations } from "next-intl/server";
+import { getTranslations } from "next-intl/server";
+import { AppStoreCta } from "@/components/app-store-cta";
 import { Reveal } from "@/components/motion/reveal";
-import { BuyButton } from "@/components/paddle/buy-button";
-import { buttonVariants } from "@/components/ui/button";
 import type { AppDefinition } from "@/content/types";
-import { formatUsd, paidTierOf } from "@/lib/pricing";
 
 export async function DownloadCta({ app }: { app: AppDefinition }) {
-  const [t, locale] = await Promise.all([getTranslations(), getLocale()]);
-  const paidTier = paidTierOf(app);
+  const t = await getTranslations();
 
   return (
     <section className="container-page pb-24 pt-4 md:pb-32" id="download">
@@ -30,25 +26,13 @@ export async function DownloadCta({ app }: { app: AppDefinition }) {
               {t("appPage.downloadSubtitle")}
             </p>
             <div className="flex flex-wrap items-center justify-center gap-3 pt-2">
-              <a href={app.downloadUrl} className={buttonVariants({ size: "lg" })}>
-                <ArrowDownToLine className="size-4" aria-hidden />
-                {t("common.downloadFree")}
-              </a>
-              {paidTier ? (
-                <BuyButton
-                  priceId={app.paddlePriceId}
-                  label={t("appPage.buyProFor", {
-                    price: formatUsd(paidTier.amountUsd, locale),
-                  })}
-                  unavailableLabel={t("appPage.checkoutUnavailable")}
-                  variant="secondary"
-                  size="lg"
-                />
-              ) : null}
+              <AppStoreCta
+                appStoreUrl={app.appStoreUrl}
+                label={t("common.viewOnAppStore")}
+                comingSoonLabel={t("appPage.appStoreComingSoon")}
+                size="lg"
+              />
             </div>
-            <p className="font-mono text-xs uppercase tracking-[0.16em] text-muted-foreground">
-              {t("appPage.fileInfo", { size: app.fileSizeMb })}
-            </p>
           </div>
         </div>
       </Reveal>

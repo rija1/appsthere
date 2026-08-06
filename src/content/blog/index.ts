@@ -6,17 +6,17 @@ import { l, type BlogPost } from "@/content/types";
  */
 export const posts: BlogPost[] = [
   {
-    slug: "introducing-lumiso-transcribe",
+    slug: "introducing-purescribe",
     category: "updates",
     title: l(
-      "Introducing Lumiso Transcribe 1.0",
-      "Voici Lumiso Transcribe 1.0",
-      "Lumiso Transcribe 1.0 正式发布",
+      "Introducing PureScribe 1.0",
+      "Voici PureScribe 1.0",
+      "PureScribe 1.0 正式发布",
     ),
     excerpt: l(
-      "Our first app is here: professional transcription that runs entirely on your Mac. No uploads, no subscriptions, no compromises.",
-      "Notre première application est là : une transcription professionnelle qui s'exécute entièrement sur votre Mac. Sans envoi, sans abonnement, sans compromis.",
-      "我们的第一款应用来了：完全在你的 Mac 上运行的专业转写。不上传、不订阅、不妥协。",
+      "Our first app is here: professional transcription that runs entirely on your device. No uploads, no subscriptions, no compromises.",
+      "Notre première application est là : une transcription professionnelle qui s'exécute entièrement sur votre appareil. Sans envoi, sans abonnement, sans compromis.",
+      "我们的第一款应用来了：完全在你的设备上运行的专业转写。不上传、不订阅、不妥协。",
     ),
     publishedAt: "2026-07-17",
     readingMinutes: 4,
@@ -24,9 +24,9 @@ export const posts: BlogPost[] = [
       {
         paragraphs: [
           l(
-            "Today we're shipping Lumiso Transcribe 1.0, the first app under the AppsThere name. It turns audio and video into accurate, editable transcripts and subtitles — and it does all of it on your Mac. Nothing is uploaded, ever.",
-            "Nous publions aujourd'hui Lumiso Transcribe 1.0, la première application signée AppsThere. Elle transforme audio et vidéo en transcriptions et sous-titres précis et éditables — et tout se passe sur votre Mac. Rien n'est jamais envoyé.",
-            "今天我们发布了 Lumiso Transcribe 1.0——AppsThere 旗下的第一款应用。它把音频和视频变成精准、可编辑的文字稿和字幕，而且全部在你的 Mac 上完成。任何数据都不会被上传。",
+            "Today we're shipping PureScribe 1.0, the first app under the AppsThere name. It turns audio and video into accurate, editable transcripts and subtitles — and it does all of it on your device, Mac, iPhone, or iPad. Nothing is uploaded, ever.",
+            "Nous publions aujourd'hui PureScribe 1.0, la première application signée AppsThere. Elle transforme audio et vidéo en transcriptions et sous-titres précis et éditables — et tout se passe sur votre appareil, Mac, iPhone ou iPad. Rien n'est jamais envoyé.",
+            "今天我们发布了 PureScribe 1.0——AppsThere 旗下的第一款应用。它把音频和视频变成精准、可编辑的文字稿和字幕，而且全部在你的设备（Mac、iPhone 或 iPad）上完成。任何数据都不会被上传。",
           ),
           l(
             "We built it because the alternatives all asked for the same trade: hand your recordings to someone's server, or accept clunky tooling. Interviews, client calls, and drafts deserve better than that trade.",
@@ -39,14 +39,14 @@ export const posts: BlogPost[] = [
         heading: l("What's in 1.0", "Ce que contient la 1.0", "1.0 包含什么"),
         paragraphs: [
           l(
-            "Six Whisper models from Tiny to Large-v3, an editor with synced playback highlighting, search and timestamp navigation, and exports to TXT, Markdown, SRT, WebVTT, and JSON. The app is sandboxed, hardened, and telemetry-free.",
-            "Six modèles Whisper de Tiny à Large-v3, un éditeur avec surlignage synchronisé à la lecture, recherche et navigation par horodatage, et des exports en TXT, Markdown, SRT, WebVTT et JSON. L'application est sandboxée, durcie et sans télémétrie.",
-            "六个 Whisper 模型（从 Tiny 到 Large-v3）、带播放同步高亮的编辑器、搜索与时间戳导航，以及 TXT、Markdown、SRT、WebVTT、JSON 导出。应用运行在沙盒中、经过加固、零遥测。",
+            "Six Whisper models from Tiny to Large-v3, an editor with synced playback highlighting, search and timestamp navigation, and exports to TXT, Markdown, SRT, WebVTT, and JSON. The app is sandboxed and telemetry-free, available on the Mac App Store and the iOS App Store.",
+            "Six modèles Whisper de Tiny à Large-v3, un éditeur avec surlignage synchronisé à la lecture, recherche et navigation par horodatage, et des exports en TXT, Markdown, SRT, WebVTT et JSON. L'application est sandboxée et sans télémétrie, disponible sur le Mac App Store et l'App Store iOS.",
+            "六个 Whisper 模型（从 Tiny 到 Large-v3）、带播放同步高亮的编辑器、搜索与时间戳导航，以及 TXT、Markdown、SRT、WebVTT、JSON 导出。应用运行在沙盒中、零遥测，已上架 Mac App Store 和 iOS App Store。",
           ),
           l(
-            "The Free version is genuinely useful — four models, every export format, the full editor. Pro adds the Turbo and Large-v3 models for maximum accuracy, for a one-time $14. No subscription; that's a principle, not a promotion.",
-            "La version gratuite est réellement utile — quatre modèles, tous les formats d'export, l'éditeur complet. Pro ajoute les modèles Turbo et Large-v3 pour une précision maximale, pour 14 $ une seule fois. Pas d'abonnement : c'est un principe, pas une promotion.",
-            "免费版真正可用——四个模型、全部导出格式、完整编辑器。专业版增加 Turbo 和 Large-v3 模型以获得最高精度，一次性 14 美元。没有订阅——这是原则，不是促销。",
+            "The Free version is genuinely useful — four models, every export format, the full editor. Pro adds the Turbo and Large-v3 models for maximum accuracy, as a one-time $14 purchase through the App Store, unlocked on every device signed into the same Apple Account. No subscription; that's a principle, not a promotion.",
+            "La version gratuite est réellement utile — quatre modèles, tous les formats d'export, l'éditeur complet. Pro ajoute les modèles Turbo et Large-v3 pour une précision maximale, avec un achat unique de 14 $ via l'App Store, débloqué sur tous les appareils connectés au même identifiant Apple. Pas d'abonnement : c'est un principe, pas une promotion.",
+            "免费版真正可用——四个模型、全部导出格式、完整编辑器。专业版增加 Turbo 和 Large-v3 模型以获得最高精度，通过 App Store 一次性购买 14 美元，即可在登录同一 Apple 账户的所有设备上解锁。没有订阅——这是原则，不是促销。",
           ),
         ],
       },
@@ -54,9 +54,9 @@ export const posts: BlogPost[] = [
         heading: l("What's next", "La suite", "接下来"),
         paragraphs: [
           l(
-            "Speaker labels, batch queues, and more languages are on the roadmap. If Lumiso saves you an afternoon of typing, tell us what would save you two.",
-            "L'étiquetage des locuteurs, les files de traitement par lots et davantage de langues sont au programme. Si Lumiso vous épargne un après-midi de frappe, dites-nous ce qui vous en épargnerait deux.",
-            "说话人标注、批量队列和更多语言已在路线图上。如果 Lumiso 帮你省下了一下午的打字时间，欢迎告诉我们还能帮你省下什么。",
+            "Speaker labels, batch queues, and more languages are on the roadmap. If PureScribe saves you an afternoon of typing, tell us what would save you two.",
+            "L'étiquetage des locuteurs, les files de traitement par lots et davantage de langues sont au programme. Si PureScribe vous épargne un après-midi de frappe, dites-nous ce qui vous en épargnerait deux.",
+            "说话人标注、批量队列和更多语言已在路线图上。如果 PureScribe 帮你省下了一下午的打字时间，欢迎告诉我们还能帮你省下什么。",
           ),
         ],
       },

@@ -14,9 +14,17 @@ export interface LegalDoc {
 }
 
 /**
- * Paddle requires a reachable privacy policy, terms, and refund policy
- * before approving a domain for checkout. Review with counsel before
- * relying on these texts.
+ * Shared across every app in the catalog (see `content/apps`), not
+ * duplicated per app: today's apps all share the same practices — no data
+ * collection, purchases exclusively through the App Store — so one set of
+ * docs is accurate for all of them and there's nothing to keep in sync
+ * across copies. App Store Connect only requires *a* reachable privacy
+ * policy URL, not one unique per app.
+ * If a future app's practices genuinely differ (e.g. it collects data, or
+ * sells outside the App Store), give it its own paragraph within the
+ * relevant section here rather than forking a whole new document — until
+ * that happens, keep this shared. Review with counsel before relying on
+ * these texts.
  */
 export const legalDocs: LegalDoc[] = [
   {
@@ -95,9 +103,9 @@ export const legalDocs: LegalDoc[] = [
         heading: l("Purchases", "Achats", "购买"),
         paragraphs: [
           l(
-            "Orders are processed by Paddle.com, acting as merchant of record. Paddle handles payment, applicable taxes, and invoicing. Prices are shown before checkout and may change for future purchases; a price change never affects a license you already own.",
-            "Les commandes sont traitées par Paddle.com, agissant en tant que revendeur officiel. Paddle gère le paiement, les taxes applicables et la facturation. Les prix sont affichés avant le paiement et peuvent évoluer pour les achats futurs ; un changement de prix n'affecte jamais une licence déjà acquise.",
-            "订单由作为官方经销商的 Paddle.com 处理。Paddle 负责支付、适用税费和发票。价格在结账前显示，未来购买的价格可能调整；价格变动绝不影响你已拥有的许可证。",
+            "Pro upgrades are sold exclusively as in-app purchases through Apple's App Store, which acts as the retailer of record. Apple handles payment, applicable taxes, and invoicing under its own terms. Prices are shown in the app and on the App Store before you buy, and may change for future purchases; a price change never affects a purchase you've already made.",
+            "Les mises à niveau Pro sont vendues exclusivement sous forme d'achats intégrés via l'App Store d'Apple, qui agit en tant que revendeur officiel. Apple gère le paiement, les taxes applicables et la facturation selon ses propres conditions. Les prix sont affichés dans l'application et sur l'App Store avant l'achat, et peuvent évoluer pour les achats futurs ; un changement de prix n'affecte jamais un achat déjà effectué.",
+            "专业版升级仅通过 Apple App Store 以应用内购买的形式销售，Apple 在其中担任官方零售商。Apple 按其自身条款负责支付、适用税费和开具发票。价格会在应用内和 App Store 上于购买前显示，未来购买的价格可能调整；价格变动绝不影响你已完成的购买。",
           ),
         ],
       },
@@ -136,25 +144,25 @@ export const legalDocs: LegalDoc[] = [
   {
     slug: "refunds",
     title: l("Refund Policy", "Politique de remboursement", "退款政策"),
-    updatedAt: "2026-07-17",
+    updatedAt: "2026-08-06",
     intro: l(
-      "Every purchase is covered by a 14-day, no-questions-asked refund policy.",
-      "Chaque achat est couvert par une garantie de remboursement de 14 jours, sans justification.",
-      "每笔购买均享有 14 天无理由退款保障。",
+      "Every Pro purchase is a one-time in-app purchase billed by Apple through the App Store, so Apple — not us — processes refunds.",
+      "Chaque achat Pro est un achat intégré unique facturé par Apple via l'App Store ; c'est donc Apple, et non nous, qui traite les remboursements.",
+      "每笔专业版购买都是通过 App Store 由 Apple 计费的一次性应用内购买，因此退款由 Apple 处理，而非我们。",
     ),
     sections: [
       {
-        heading: l("How it works", "Comment ça marche", "如何退款"),
+        heading: l("How to request a refund", "Comment demander un remboursement", "如何申请退款"),
         paragraphs: [
           l(
-            "If a purchase isn't right for you, email support@appsthere.com within 14 days of the order — or use the refund link in your Paddle receipt — and the full amount will be returned to your original payment method. Refunds are typically processed within 3–5 business days. Your license key is deactivated for future major versions but nothing is uninstalled from your machine.",
-            "Si un achat ne vous convient pas, écrivez à support@appsthere.com dans les 14 jours suivant la commande — ou utilisez le lien de remboursement de votre reçu Paddle — et le montant intégral sera reversé sur votre moyen de paiement d'origine. Les remboursements sont généralement traités sous 3 à 5 jours ouvrés. Votre clé de licence est désactivée pour les futures versions majeures, mais rien n'est désinstallé de votre machine.",
-            "如果购买不符合你的需求，请在下单后 14 天内写信至 support@appsthere.com——或使用 Paddle 收据中的退款链接——全额款项将退回你的原支付方式。退款通常在 3–5 个工作日内处理完毕。你的许可证密钥将对未来的主版本停用，但你机器上的任何内容都不会被卸载。",
+            "Because Apple is the retailer of record for every purchase, we have no ability to issue refunds ourselves and no visibility into your payment details. To request one, go to reportaproblem.apple.com and sign in with the Apple Account used for the purchase, or on your device open Settings → your name → Media & Purchases → View Account → Purchase History, find the purchase, and choose \"Report a Problem.\" Apple reviews and decides these requests under its own refund policy.",
+            "Apple étant le revendeur officiel de chaque achat, nous ne sommes pas en mesure d'émettre nous-mêmes de remboursement et n'avons aucune visibilité sur vos informations de paiement. Pour en demander un, rendez-vous sur reportaproblem.apple.com et connectez-vous avec l'identifiant Apple utilisé pour l'achat, ou sur votre appareil ouvrez Réglages → votre nom → Média et achats → Voir le compte → Historique des achats, retrouvez l'achat, puis choisissez « Signaler un problème ». Apple examine et statue sur ces demandes selon sa propre politique de remboursement.",
+            "由于 Apple 是每笔购买的官方零售商，我们无法自行办理退款，也无法查看你的付款信息。如需申请退款，请访问 reportaproblem.apple.com 并使用购买时所用的 Apple 账户登录，或在设备上打开「设置 → 你的姓名 → 媒体与购买项目 → 查看账户 → 购买历史记录」，找到该笔购买后选择「报告问题」。Apple 会依据其自身的退款政策审核并裁定这些申请。",
           ),
           l(
-            "Tip: the Free version is the same application with the same editor and exports, so you can evaluate everything except the two Pro models before spending anything.",
-            "Astuce : la version gratuite est la même application, avec le même éditeur et les mêmes exports — vous pouvez donc tout évaluer, hormis les deux modèles Pro, avant de dépenser quoi que ce soit.",
-            "提示：免费版就是同一款应用，拥有相同的编辑器和导出功能，因此在花钱之前，你可以体验除两个专业版模型之外的全部功能。",
+            "Tip: the Free version is the same application with the same editor and exports, so you can evaluate everything except the Turbo and Large models before buying Pro.",
+            "Astuce : la version gratuite est la même application, avec le même éditeur et les mêmes exports — vous pouvez donc tout évaluer, hormis les modèles Turbo et Large, avant d'acheter Pro.",
+            "提示：免费版就是同一款应用，拥有相同的编辑器和导出功能，因此在购买专业版之前，你可以体验除 Turbo 和 Large 模型之外的全部功能。",
           ),
         ],
       },
