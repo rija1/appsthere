@@ -28,13 +28,13 @@ export async function Cta() {
             </p>
             <div className="flex flex-wrap items-center justify-center gap-3 pt-2">
               <Link
-                href="/apps/lumiso-transcribe"
+                href="/apps/purescribe"
                 className={buttonVariants({ size: "lg" })}
               >
                 {t("primary")}
               </Link>
               <Link
-                href="/apps/lumiso-transcribe"
+                href="/apps/purescribe"
                 className={cn(buttonVariants({ variant: "ghost", size: "lg" }))}
               >
                 {t("secondary")}

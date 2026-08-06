@@ -29,9 +29,9 @@
     "label": "Language"
   },
   "hero": {
-    "badge": "Lumiso Transcribe 1.0 is out",
+    "badge": "PureScribe 1.0 is out",
     "title": "From recording to transcript, entirely offline.",
-    "subtitle": "Lumiso Transcribe turns audio and video into accurate transcripts — powered by Whisper, running entirely on your Mac. No uploads, ever.",
+    "subtitle": "PureScribe turns audio and video into accurate transcripts — powered by Whisper, running entirely on your device. No uploads, ever.",
     "socialProof": "No subscriptions. No accounts. No telemetry."
   },
   "why": {
@@ -74,7 +74,7 @@
     "items": {
       "platforms": {
         "question": "Which platforms do you support?",
-        "answer": "Each app lists its platform on its page. Lumiso Transcribe is a native macOS app (macOS 14+). Windows versions of future apps will be announced on the blog."
+        "answer": "Each app lists its platform on its page. PureScribe is a native app for macOS 14+, iOS 17+, and iPadOS 17+. Windows versions of future apps will be announced on the blog."
       },
       "payment": {
         "question": "How does purchasing work?",
@@ -91,7 +91,7 @@
     }
   },
   "cta": {
-    "title": "Try Lumiso Transcribe today.",
+    "title": "Try PureScribe today.",
     "subtitle": "The free version is fully usable — download it, drop in a recording, and see for yourself.",
     "primary": "Download for macOS",
     "secondary": "See all features"
@@ -196,7 +196,7 @@
   },
   "meta": {
     "homeTitle": "AppsThere — Software you'll actually enjoy using",
-    "homeDescription": "Fast, elegant, private desktop applications. Pay once, own forever. Home of Lumiso Transcribe.",
+    "homeDescription": "Fast, elegant, private desktop and mobile applications. Pay once, own forever. Home of PureScribe.",
     "titleTemplate": "%s — AppsThere"
   }
 }

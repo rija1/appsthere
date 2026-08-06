@@ -14,8 +14,8 @@ export async function Footer() {
       title: t("footer.product"),
       links: [
         { label: t("footer.allApps"), href: "/apps" },
-        { label: "Lumiso Transcribe", href: "/apps/lumiso-transcribe" },
-        { label: t("footer.changelog"), href: "/apps/lumiso-transcribe#changelog" },
+        { label: "PureScribe", href: "/apps/purescribe" },
+        { label: t("footer.changelog"), href: "/apps/purescribe#changelog" },
       ],
     },
     {

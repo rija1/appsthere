@@ -3,7 +3,7 @@ import { createPrivateKey, createPublicKey, sign, verify } from "node:crypto";
 
 /**
  * License minting — the server-side twin of the desktop app's
- * `LicenseVerifier` (see LumisoTranscribe/docs/LICENSING.md).
+ * `LicenseVerifier` (see PureScribe (StoreKit-based; the old offline license-key system this file implements is unused, see below)).
  *
  * A key is `base64url(payloadJSON) + "." + base64url(ed25519Signature)`.
  * The app verifies the signature offline with the embedded public key,

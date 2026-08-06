@@ -29,9 +29,9 @@
     "label": "Langue"
   },
   "hero": {
-    "badge": "Lumiso Transcribe 1.0 est disponible",
+    "badge": "PureScribe 1.0 est disponible",
     "title": "De l'enregistrement à la transcription, entièrement hors ligne.",
-    "subtitle": "Lumiso Transcribe transforme audio et vidéo en transcriptions précises — propulsé par Whisper, entièrement sur votre Mac. Aucun envoi, jamais.",
+    "subtitle": "PureScribe transforme audio et vidéo en transcriptions précises — propulsé par Whisper, entièrement sur votre appareil. Aucun envoi, jamais.",
     "socialProof": "Sans abonnement. Sans compte. Sans télémétrie."
   },
   "why": {
@@ -74,7 +74,7 @@
     "items": {
       "platforms": {
         "question": "Quelles plateformes prenez-vous en charge ?",
-        "answer": "Chaque application indique sa plateforme sur sa page. Lumiso Transcribe est une application macOS native (macOS 14+). Les versions Windows des prochaines apps seront annoncées sur le blog."
+        "answer": "Chaque application indique sa plateforme sur sa page. PureScribe est une application native pour macOS 14+, iOS 17+ et iPadOS 17+. Les versions Windows des prochaines apps seront annoncées sur le blog."
       },
       "payment": {
         "question": "Comment se passe l'achat ?",
@@ -91,7 +91,7 @@
     }
   },
   "cta": {
-    "title": "Essayez Lumiso Transcribe dès aujourd'hui.",
+    "title": "Essayez PureScribe dès aujourd'hui.",
     "subtitle": "La version gratuite est pleinement utilisable — téléchargez-la, déposez un enregistrement et jugez par vous-même.",
     "primary": "Télécharger pour macOS",
     "secondary": "Voir toutes les fonctionnalités"
@@ -196,7 +196,7 @@
   },
   "meta": {
     "homeTitle": "AppsThere — Des logiciels qu'on aime vraiment utiliser",
-    "homeDescription": "Des applications de bureau rapides, élégantes et privées. Payez une fois, gardez pour toujours. Créateur de Lumiso Transcribe.",
+    "homeDescription": "Des applications de bureau et mobiles rapides, élégantes et privées. Payez une fois, gardez pour toujours. Créateur de PureScribe.",
     "titleTemplate": "%s — AppsThere"
   }
 }

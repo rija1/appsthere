@@ -29,9 +29,9 @@
     "label": "语言"
   },
   "hero": {
-    "badge": "Lumiso Transcribe 1.0 已发布",
+    "badge": "PureScribe 1.0 已发布",
     "title": "从录音到文字稿，完全离线完成。",
-    "subtitle": "Lumiso Transcribe 由 Whisper 驱动，将音频和视频转换为精准的文字稿——完全在你的 Mac 上运行，绝不上传。",
+    "subtitle": "PureScribe 由 Whisper 驱动，将音频和视频转换为精准的文字稿——完全在你的设备上运行，绝不上传。",
     "socialProof": "无订阅。无账号。无遥测。"
   },
   "why": {
@@ -74,7 +74,7 @@
     "items": {
       "platforms": {
         "question": "你们支持哪些平台？",
-        "answer": "每款应用的页面都会标明平台。Lumiso Transcribe 是原生 macOS 应用（macOS 14+）。后续应用的 Windows 版本将在博客上公布。"
+        "answer": "每款应用的页面都会标明平台。PureScribe 是原生应用，支持 macOS 14+、iOS 17+ 和 iPadOS 17+。后续应用的 Windows 版本将在博客上公布。"
       },
       "payment": {
         "question": "购买流程是怎样的？",
@@ -91,7 +91,7 @@
     }
   },
   "cta": {
-    "title": "今天就试试 Lumiso Transcribe。",
+    "title": "今天就试试 PureScribe。",
     "subtitle": "免费版即可正常使用——下载后拖入一段录音，亲自体验。",
     "primary": "下载 macOS 版",
     "secondary": "查看全部功能"
@@ -196,7 +196,7 @@
   },
   "meta": {
     "homeTitle": "AppsThere — 让你真正爱用的软件",
-    "homeDescription": "快速、优雅、注重隐私的桌面应用。一次付费，永久拥有。Lumiso Transcribe 出品方。",
+    "homeDescription": "快速、优雅、注重隐私的桌面与移动应用。一次付费，永久拥有。PureScribe 出品方。",
     "titleTemplate": "%s — AppsThere"
   }
 }

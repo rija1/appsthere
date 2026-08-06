@@ -79,7 +79,7 @@ export function Header() {
           <LocaleSwitcher label={t("localeSwitcher.label")} />
           <ThemeToggle label={t("theme.toggle")} />
           <Link
-            href="/apps/lumiso-transcribe"
+            href="/apps/purescribe"
             className={cn(buttonVariants({ size: "sm" }), "ml-1 hidden sm:inline-flex")}
           >
             {t("common.download")}
@@ -126,7 +126,7 @@ export function Header() {
                 </Link>
               ))}
               <Link
-                href="/apps/lumiso-transcribe"
+                href="/apps/purescribe"
                 onClick={closeMenu}
                 className={cn(buttonVariants({ size: "lg" }), "mt-2")}
               >

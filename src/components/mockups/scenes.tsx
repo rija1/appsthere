@@ -11,7 +11,7 @@ import { cn } from "@/lib/utils";
 import { MacWindow } from "./mac-window";
 
 /**
- * Hand-drawn "screenshots" of Lumiso Transcribe, rendered as themed DOM
+ * Hand-drawn "screenshots" of PureScribe, rendered as themed DOM
  * so they stay crisp at any size and adapt to light/dark. Content mirrors
  * the real app: editor with synced highlighting, model manager, exports.
  */
@@ -288,10 +288,10 @@ function DropzoneScene() {
 }
 
 const SCENE_TITLES: Record<MockupScene, string> = {
-  editor: "Lumiso Transcribe — interview.m4a",
-  models: "Lumiso Transcribe — Models",
-  export: "Lumiso Transcribe — Export",
-  dropzone: "Lumiso Transcribe",
+  editor: "PureScribe — interview.m4a",
+  models: "PureScribe — Models",
+  export: "PureScribe — Export",
+  dropzone: "PureScribe",
 };
 
 /** A full app window rendering the requested scene. */

@@ -5,7 +5,7 @@ import { ArrowDownToLine, CheckCircle2 } from "lucide-react";
 import { Reveal } from "@/components/motion/reveal";
 import { buttonVariants } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { lumisoTranscribe } from "@/content/apps/lumiso-transcribe";
+import { pureScribe } from "@/content/apps/purescribe";
 import { routing } from "@/i18n/routing";
 import { site } from "@/lib/site";
 

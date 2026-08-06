@@ -259,14 +259,14 @@ export const pureScribe: AppDefinition = {
     {
       id: "faq-privacy",
       question: l(
-        "Does my audio really never leave my Mac?",
-        "Mon audio ne quitte-t-il vraiment jamais mon Mac ?",
-        "我的音频真的不会离开我的 Mac 吗？",
+        "Does my audio really never leave my device?",
+        "Mon audio ne quitte-t-il vraiment jamais mon appareil ?",
+        "我的音频真的不会离开我的设备吗？",
       ),
       answer: l(
-        "Really. Transcription runs locally on whisper.cpp with Metal acceleration. The app is sandboxed, has no telemetry, and the only network requests it ever makes are the model downloads you explicitly start — even license activation happens offline.",
-        "Vraiment. La transcription s'exécute localement via whisper.cpp avec l'accélération Metal. L'application est sandboxée, sans télémétrie, et les seules requêtes réseau qu'elle effectue sont les téléchargements de modèles que vous lancez explicitement — même l'activation de licence se fait hors ligne.",
-        "真的。转写通过 whisper.cpp 在本地运行，并由 Metal 加速。应用运行在沙盒中、没有遥测，唯一的网络请求是你主动发起的模型下载——连许可证激活都是离线完成的。",
+        "Really. Transcription runs locally on whisper.cpp with Metal acceleration. The app is sandboxed, has no telemetry, and the only network requests it ever makes are the model downloads you explicitly start. Purchases are verified through Apple's own on-device receipt system — we never see them, and there's nothing to activate.",
+        "Vraiment. La transcription s'exécute localement via whisper.cpp avec l'accélération Metal. L'application est sandboxée, sans télémétrie, et les seules requêtes réseau qu'elle effectue sont les téléchargements de modèles que vous lancez explicitement. Les achats sont vérifiés via le système de reçus propre à Apple, sur l'appareil — nous ne les voyons jamais, et il n'y a rien à activer.",
+        "真的。转写通过 whisper.cpp 在本地运行，并由 Metal 加速。应用运行在沙盒中、没有遥测，唯一的网络请求是你主动发起的模型下载。购买通过 Apple 自有的设备端收据系统核实——我们从不接触这些信息，也无需任何激活步骤。",
       ),
     },
     {
@@ -324,14 +324,14 @@ export const pureScribe: AppDefinition = {
     {
       id: "faq-devices",
       question: l(
-        "On how many Macs can I use my license?",
-        "Sur combien de Mac puis-je utiliser ma licence ?",
-        "一份许可证可以在几台 Mac 上使用？",
+        "On how many devices can I use Pro?",
+        "Sur combien d'appareils puis-je utiliser Pro ?",
+        "专业版可以在几台设备上使用？",
       ),
       answer: l(
-        "On every Mac you personally use. The license is per-person, not per-machine — we think that's the fair way to do it.",
-        "Sur tous les Mac que vous utilisez personnellement. La licence est par personne, pas par machine — c'est notre idée d'un modèle équitable.",
-        "你个人使用的每一台 Mac 都可以。许可证按人授权，而非按设备——我们认为这才公平。",
+        "On every Mac, iPhone, and iPad signed into the Apple Account you used to buy it — that's what a universal purchase means. Setting up a new device takes one tap: Settings → Pro → Restore Purchases.",
+        "Sur tous les Mac, iPhone et iPad connectés à l'identifiant Apple utilisé pour l'achat — c'est le principe de l'achat universel. Configurer un nouvel appareil ne prend qu'un geste : Réglages → Pro → Restaurer les achats.",
+        "登录同一 Apple 账户（即购买时使用的账户）的所有 Mac、iPhone 和 iPad 都可以使用——这正是通用购买的含义。在新设备上启用只需一步：设置 → 专业版 → 恢复购买。",
       ),
     },
   ],
@@ -368,9 +368,9 @@ export const pureScribe: AppDefinition = {
       id: "req-disk",
       label: l("Disk space", "Espace disque", "磁盘空间"),
       value: l(
-        "App: 38 MB · Models: 78 MB – 3 GB each",
-        "App : 38 Mo · Modèles : 78 Mo à 3 Go chacun",
-        "应用：38 MB · 模型：每个 78 MB – 3 GB",
+        "Models: 78 MB – 3 GB each, downloaded on demand",
+        "Modèles : 78 Mo à 3 Go chacun, téléchargés à la demande",
+        "模型：每个 78 MB – 3 GB，按需下载",
       ),
     },
     {
@@ -411,9 +411,9 @@ export const pureScribe: AppDefinition = {
           "内置模型管理器，下载经 SHA-256 校验",
         ),
         l(
-          "Offline license activation — sandboxed, hardened runtime, zero telemetry",
-          "Activation de licence hors ligne — sandbox, runtime durci, zéro télémétrie",
-          "离线许可证激活——沙盒运行、强化运行时、零遥测",
+          "Sandboxed and telemetry-free, distributed on the Mac App Store and the iOS App Store",
+          "Sandboxée et sans télémétrie, distribuée sur le Mac App Store et l'App Store iOS",
+          "运行在沙盒中且零遥测，已上架 Mac App Store 和 iOS App Store",
         ),
       ],
     },

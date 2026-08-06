@@ -4,7 +4,7 @@ import { AppStoreCta } from "@/components/app-store-cta";
 import { HeroMockup } from "@/components/mockups/hero-mockup";
 import { Reveal } from "@/components/motion/reveal";
 import { Badge } from "@/components/ui/badge";
-import { lumisoTranscribe } from "@/content/apps/lumiso-transcribe";
+import { pureScribe } from "@/content/apps/purescribe";
 import { Link } from "@/i18n/navigation";
 
 export async function Hero() {
@@ -24,7 +24,7 @@ export async function Hero() {
       <div className="container-page grid items-center gap-14 py-20 md:py-28 lg:grid-cols-[1.05fr_1fr] lg:gap-10">
         <div className="flex max-w-xl flex-col items-start gap-6">
           <Reveal>
-            <Link href="/apps/lumiso-transcribe" className="group">
+            <Link href="/apps/purescribe" className="group">
               <Badge variant="brand" className="py-1 pl-1.5 pr-2.5 normal-case tracking-normal">
                 <span className="rounded-full bg-brand px-1.5 py-px text-[10px] font-semibold text-brand-foreground">
                   {t("common.new")}
@@ -52,7 +52,7 @@ export async function Hero() {
 
           <Reveal delay={0.24} className="flex flex-wrap items-center gap-3">
             <AppStoreCta
-              appStoreUrl={lumisoTranscribe.appStoreUrl}
+              appStoreUrl={pureScribe.appStoreUrl}
               label={t("common.viewOnAppStore")}
               comingSoonLabel={t("appPage.appStoreComingSoon")}
               size="lg"
