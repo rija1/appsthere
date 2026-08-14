@@ -10,6 +10,10 @@ import { formatUsd } from "@/lib/pricing";
 import { cn } from "@/lib/utils";
 
 export async function AppPricing({ app }: { app: AppDefinition }) {
+  // An app whose price isn't settled yet renders no pricing section at all,
+  // the same way Reviews hides itself until there are real reviews.
+  if (app.pricing.length === 0) return null;
+
   const [t, locale] = await Promise.all([getTranslations(), getLocale()]);
 
   return (

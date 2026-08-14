@@ -1,9 +1,13 @@
 import {
+  BookOpen,
+  CalendarClock,
   Cpu,
   Download,
   Languages,
   Lock,
+  MoonStar,
   Pencil,
+  Plane,
   Shield,
   Waves,
   Zap,
@@ -21,6 +25,10 @@ const ICONS: Record<AppFeature["icon"], LucideIcon> = {
   download: Download,
   waves: Waves,
   shield: Shield,
+  book: BookOpen,
+  plane: Plane,
+  moon: MoonStar,
+  calendar: CalendarClock,
 };
 
 /** Brand-tinted rounded square around a lucide icon. */
