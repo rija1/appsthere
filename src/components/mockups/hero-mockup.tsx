@@ -1,8 +1,16 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Captions, Lock } from "lucide-react";
+import {
+  BadgeCheck,
+  Captions,
+  Lock,
+  MoonStar,
+  Radio,
+  SlidersVertical,
+} from "lucide-react";
 import { EASE_OUT, useRevealDisabled } from "@/components/motion/reveal";
+import type { MockupScene } from "@/content/types";
 import { AppMockup } from "./scenes";
 
 function Glow() {
@@ -45,6 +53,75 @@ function ExportChip() {
   );
 }
 
+function UnitsChip() {
+  return (
+    <>
+      <span className="flex size-7 items-center justify-center rounded-lg bg-brand-soft text-brand">
+        <Radio className="size-3.5" strokeWidth={1.8} aria-hidden />
+      </span>
+      <div className="leading-tight">
+        <p className="text-xs font-semibold">3 units found</p>
+        <p className="text-[10px] text-muted-foreground">On this network</p>
+      </div>
+    </>
+  );
+}
+
+function GainChip() {
+  return (
+    <>
+      <span className="flex size-7 items-center justify-center rounded-lg bg-brand-soft text-brand">
+        <SlidersVertical className="size-3.5" strokeWidth={1.8} aria-hidden />
+      </span>
+      <div className="leading-tight">
+        <p className="text-xs font-semibold">Ch 3 · +45 dB</p>
+        <p className="text-[10px] text-muted-foreground">Applied instantly</p>
+      </div>
+    </>
+  );
+}
+
+function NightChip() {
+  return (
+    <>
+      <span className="flex size-7 items-center justify-center rounded-lg bg-brand-soft text-brand">
+        <MoonStar className="size-3.5" strokeWidth={1.8} aria-hidden />
+      </span>
+      <div className="leading-tight">
+        <p className="text-xs font-semibold">0.8 night</p>
+        <p className="text-[10px] text-muted-foreground">From the sun&rsquo;s position</p>
+      </div>
+    </>
+  );
+}
+
+function CurrencyChip() {
+  return (
+    <>
+      <span className="flex size-7 items-center justify-center rounded-lg bg-brand-soft text-brand">
+        <BadgeCheck className="size-3.5" strokeWidth={1.8} aria-hidden />
+      </span>
+      <div className="leading-tight">
+        <p className="text-xs font-semibold">Current for passengers</p>
+        <p className="text-[10px] text-muted-foreground">Until Sep 15</p>
+      </div>
+    </>
+  );
+}
+
+/**
+ * The pair of floating chips that flank the hero window, chosen to match the
+ * app whose scene is on screen — a transcription claim next to a stagebox
+ * would be nonsense.
+ */
+const CHIPS: Partial<
+  Record<MockupScene, { left: () => React.ReactElement; right: () => React.ReactElement }>
+> = {
+  editor: { left: UploadsChip, right: ExportChip },
+  console: { left: UnitsChip, right: GainChip },
+  logbook: { left: NightChip, right: CurrencyChip },
+};
+
 const CHIP_CLASS =
   "absolute hidden items-center gap-2 rounded-xl border border-border bg-card px-3.5 py-2.5 shadow-[0_12px_32px_-12px_var(--shadow-color)] sm:flex";
 
@@ -53,19 +130,22 @@ const CHIP_CLASS =
  * flanked by two floating status chips. Renders statically when motion
  * is reduced or disabled.
  */
-export function HeroMockup() {
+export function HeroMockup({ scene = "editor" }: { scene?: MockupScene }) {
   const disabled = useRevealDisabled();
+  const chips = CHIPS[scene] ?? CHIPS.editor!;
+  const LeftChip = chips.left;
+  const RightChip = chips.right;
 
   if (disabled) {
     return (
       <div className="relative" aria-hidden>
         <Glow />
-        <AppMockup scene="editor" />
+        <AppMockup scene={scene} />
         <div className={`${CHIP_CLASS} -left-4 -bottom-5`}>
-          <UploadsChip />
+          <LeftChip />
         </div>
         <div className={`${CHIP_CLASS} -right-3 -top-4`}>
-          <ExportChip />
+          <RightChip />
         </div>
       </div>
     );
@@ -84,7 +164,7 @@ export function HeroMockup() {
           animate={{ y: [0, -8, 0] }}
           transition={{ duration: 7, repeat: Infinity, ease: "easeInOut" }}
         >
-          <AppMockup scene="editor" animate />
+          <AppMockup scene={scene} animate />
         </motion.div>
       </motion.div>
 
@@ -94,7 +174,7 @@ export function HeroMockup() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.7, ease: EASE_OUT, delay: 0.55 }}
       >
-        <UploadsChip />
+        <LeftChip />
       </motion.div>
 
       <motion.div
@@ -103,7 +183,7 @@ export function HeroMockup() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.7, ease: EASE_OUT, delay: 0.7 }}
       >
-        <ExportChip />
+        <RightChip />
       </motion.div>
     </div>
   );

@@ -56,7 +56,7 @@ export async function AppHero({ app }: { app: AppDefinition }) {
           </Reveal>
         </div>
 
-        <HeroMockup />
+        <HeroMockup scene={app.heroScene} />
       </div>
     </section>
   );

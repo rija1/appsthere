@@ -13,8 +13,21 @@ export function pick(text: Localized, locale: string): string {
   return text[locale as Locale] ?? text.en;
 }
 
-/** Vector scenes rendered by `@/components/mockups`. */
-export type MockupScene = "editor" | "models" | "export" | "dropzone";
+/**
+ * Vector scenes rendered by `@/components/mockups`. Each scene is specific to
+ * one app — `editor`/`models`/`export`/`dropzone` are PureScribe, `console`
+ * and `units` are Stagebox Remote, `logbook` and `recency` are Pilote — so
+ * the window title can be derived from the scene alone.
+ */
+export type MockupScene =
+  | "editor"
+  | "models"
+  | "export"
+  | "dropzone"
+  | "console"
+  | "units"
+  | "logbook"
+  | "recency";
 
 export interface AppFeature {
   id: string;
@@ -27,7 +40,11 @@ export interface AppFeature {
     | "pencil"
     | "download"
     | "waves"
-    | "shield";
+    | "shield"
+    | "book"
+    | "plane"
+    | "moon"
+    | "calendar";
   title: Localized;
   description: Localized;
 }

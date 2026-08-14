@@ -1,9 +1,14 @@
 import {
+  AlertTriangle,
   ArrowDownToLine,
   Check,
+  CheckCircle2,
   FileAudio,
   FileVideo,
+  Lock,
+  MoonStar,
   Play,
+  Radio,
   Search,
 } from "lucide-react";
 import type { MockupScene } from "@/content/types";
@@ -287,11 +292,312 @@ function DropzoneScene() {
   );
 }
 
+/**
+ * Stagebox Remote. Channel strips mirror the real app: number, +48V, meter
+ * with peak-hold line, gain readout, HPF. The four unlocked strips are the
+ * free tier; the rest carry the lock overlay, meters still running.
+ */
+const CHANNELS = [
+  { n: 1, gain: "+34dB", level: 0.0, peak: 0.06, p48: true, unlocked: true },
+  { n: 2, gain: "+24dB", level: 0.62, peak: 0.78, p48: false, unlocked: true },
+  { n: 3, gain: "+45dB", level: 0.41, peak: 0.55, p48: true, unlocked: true },
+  { n: 4, gain: "−6dB", level: 0.08, peak: 0.12, p48: false, unlocked: true },
+  { n: 5, gain: "+24dB", level: 0.71, peak: 0.88, p48: false, unlocked: false },
+  { n: 6, gain: "+12dB", level: 0.34, peak: 0.47, p48: false, unlocked: false },
+];
+
+function ChannelMeter({ level, peak }: { level: number; peak: number }) {
+  // Green up to 65 %, yellow to 85 %, red above — the app's own thresholds.
+  const green = Math.min(level, 0.65);
+  const yellow = Math.max(0, Math.min(level, 0.85) - 0.65);
+  const red = Math.max(0, level - 0.85);
+  return (
+    <div className="relative h-16 w-3 overflow-hidden rounded-[3px] bg-foreground/85">
+      <div className="absolute inset-x-px bottom-px flex flex-col-reverse">
+        <span className="w-full bg-emerald-400" style={{ height: `${green * 100}%` }} />
+        <span className="w-full bg-amber-400" style={{ height: `${yellow * 100}%` }} />
+        <span className="w-full bg-red-500" style={{ height: `${red * 100}%` }} />
+      </div>
+      {peak > 0.02 && (
+        <span
+          className="absolute inset-x-px h-[1.5px] bg-white"
+          style={{ bottom: `${peak * 100}%` }}
+        />
+      )}
+    </div>
+  );
+}
+
+function ConsoleScene({ animate }: { animate: boolean }) {
+  return (
+    <div className="aspect-[16/10] bg-muted/30 p-3 text-[10px]">
+      <div className="flex items-center gap-2 pb-2.5">
+        <span className="size-1.5 rounded-full bg-emerald-500" />
+        <div className="leading-tight">
+          <p className="text-[10px] font-semibold tracking-tight">Y001 · Tio1608-D2</p>
+          <p className="text-[8px] text-muted-foreground">192.168.3.105 · 16 inputs</p>
+        </div>
+        <span
+          className={cn(
+            "ml-auto rounded-md px-1.5 py-0.5 font-mono text-[7px] font-semibold uppercase tracking-wide",
+            animate
+              ? "bg-brand text-brand-foreground"
+              : "border border-border text-muted-foreground",
+          )}
+        >
+          Peak
+        </span>
+        <span className="rounded-md px-1.5 py-0.5 font-mono text-[7px] font-semibold uppercase tracking-wide text-red-500">
+          +48V
+        </span>
+      </div>
+
+      <div className="grid grid-cols-6 gap-1.5">
+        {CHANNELS.map((channel) => (
+          <div
+            key={channel.n}
+            className="relative flex flex-col items-center gap-1 rounded-lg border border-border bg-card px-1 py-1.5"
+          >
+            <span className="text-[9px] font-bold">{channel.n}</span>
+            <span
+              className={cn(
+                "w-full rounded-[3px] py-px text-center font-mono text-[6px] font-bold",
+                channel.p48
+                  ? "bg-red-500 text-white"
+                  : "bg-muted text-muted-foreground",
+              )}
+            >
+              +48V
+            </span>
+            <ChannelMeter level={channel.level} peak={channel.peak} />
+            <span className="w-full rounded-[3px] bg-foreground/85 py-px text-center font-mono text-[6.5px] font-bold text-emerald-400">
+              {channel.gain}
+            </span>
+            <span className="w-full rounded-[3px] bg-muted py-px text-center font-mono text-[6px] text-muted-foreground">
+              HPF
+            </span>
+            {!channel.unlocked && (
+              <span className="absolute inset-0 flex items-center justify-center rounded-lg bg-card/75">
+                <Lock className="size-3 text-muted-foreground" strokeWidth={1.8} />
+              </span>
+            )}
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+const UNITS = [
+  { name: "Y001 · Tio1608-D2", meta: "192.168.3.105 · 16 inputs", state: "online" },
+  { name: "Y002 · Tio1608-D2", meta: "192.168.3.106 · 16 inputs", state: "online" },
+  { name: "Y007 · Rio3224-D2", meta: "192.168.3.112 · 32 inputs", state: "online" },
+  { name: "Y009 · Tio1608-D2", meta: "reconnecting…", state: "offline" },
+];
+
+function UnitsScene() {
+  return (
+    <div className="flex aspect-[16/10] flex-col gap-1.5 bg-muted/30 p-4 text-[10px]">
+      <p className="pb-0.5 font-mono text-[8px] uppercase tracking-widest text-muted-foreground">
+        Units found
+      </p>
+      {UNITS.map((unit) => (
+        <div
+          key={unit.name}
+          className="flex items-center gap-2 rounded-lg border border-border bg-card px-2.5 py-2"
+        >
+          <span
+            className={cn(
+              "size-1.5 shrink-0 rounded-full",
+              unit.state === "online" ? "bg-emerald-500" : "bg-amber-400",
+            )}
+          />
+          <div className="min-w-0 leading-tight">
+            <p className="truncate text-[9.5px] font-semibold tracking-tight">{unit.name}</p>
+            <p className="truncate text-[8px] text-muted-foreground">{unit.meta}</p>
+          </div>
+          {unit.state === "online" && (
+            <Radio className="ml-auto size-3 shrink-0 text-brand" strokeWidth={1.8} />
+          )}
+        </div>
+      ))}
+    </div>
+  );
+}
+
+/* Pilote — flights and recency, mirroring the app's Logbook and Totals tabs. */
+
+type LogbookRow =
+  | { kind: "month"; label: string; total: string }
+  | {
+      kind: "flight";
+      date: string;
+      route: string;
+      aircraft: string;
+      total: string;
+      night?: string;
+      sim?: boolean;
+    };
+
+const LOGBOOK_ROWS: LogbookRow[] = [
+  { kind: "month", label: "August 2026", total: "3.0" },
+  { kind: "flight", date: "11 Aug", route: "KPAO → KHAF", aircraft: "N172SP · C172", total: "0.9" },
+  { kind: "flight", date: "11 Aug", route: "KHAF → KPAO", aircraft: "N172SP · C172", total: "0.8" },
+  { kind: "flight", date: "5 Aug", route: "KPAO → KPAO", aircraft: "N172SP · C172", total: "1.2" },
+  { kind: "month", label: "July 2026", total: "7.7" },
+  { kind: "flight", date: "31 Jul", route: "KPAO → KMRY", aircraft: "N301PA · PA44", total: "2.2" },
+  {
+    kind: "flight",
+    date: "31 Jul",
+    route: "KMRY → KPAO",
+    aircraft: "N301PA · PA44",
+    total: "2.1",
+    night: "0.8",
+  },
+  {
+    kind: "flight",
+    date: "22 Jul",
+    route: "KPAO → KPAO",
+    aircraft: "SIM-FMX · PA44",
+    total: "1.5",
+    sim: true,
+  },
+  { kind: "flight", date: "14 Jul", route: "KSBA → KPAO", aircraft: "N172SP · C172", total: "1.7" },
+];
+
+function LogbookScene() {
+  return (
+    <div className="flex aspect-[16/10] flex-col gap-1 bg-muted/30 p-4 text-[10px]">
+      {LOGBOOK_ROWS.map((row) =>
+        row.kind === "month" ? (
+          <div
+            key={row.label}
+            className="flex items-baseline justify-between px-0.5 pb-0.5 pt-1 first:pt-0"
+          >
+            <p className="font-mono text-[8px] uppercase tracking-widest text-muted-foreground">
+              {row.label}
+            </p>
+            <p className="font-mono text-[9px] font-semibold tabular-nums text-muted-foreground">
+              {row.total}
+            </p>
+          </div>
+        ) : (
+          <div
+            key={`${row.date}-${row.route}`}
+            className="flex items-center gap-2 rounded-lg border border-border bg-card px-2.5 py-1.5"
+          >
+            <span className="w-9 shrink-0 font-mono text-[8px] text-muted-foreground">
+              {row.date}
+            </span>
+            <div className="min-w-0 leading-tight">
+              <p className="truncate text-[9.5px] font-semibold tracking-tight">{row.route}</p>
+              <p className="truncate text-[8px] text-muted-foreground">{row.aircraft}</p>
+            </div>
+            <div className="ml-auto flex shrink-0 items-center gap-2">
+              {row.night && (
+                <span className="flex items-center gap-0.5 text-[8px] text-muted-foreground">
+                  <MoonStar className="size-2.5" strokeWidth={1.8} />
+                  {row.night}
+                </span>
+              )}
+              <span className="text-right leading-tight">
+                <span
+                  className={cn(
+                    "block font-mono text-[10px] font-semibold tabular-nums",
+                    row.sim && "text-muted-foreground",
+                  )}
+                >
+                  {row.total}
+                </span>
+                {row.sim && (
+                  <span className="block font-mono text-[7px] uppercase text-muted-foreground/70">
+                    sim
+                  </span>
+                )}
+              </span>
+            </div>
+          </div>
+        ),
+      )}
+    </div>
+  );
+}
+
+const RECENCY = [
+  {
+    title: "Carrying passengers · SEL",
+    detail: "4 takeoffs and 4 landings in the last 90 days",
+    rule: "14 CFR § 61.57(a)",
+    state: "ok",
+  },
+  {
+    title: "Instrument currency",
+    detail: "4 of 6 approaches in 6 months · holding missing",
+    rule: "14 CFR § 61.57(c)",
+    state: "bad",
+  },
+  {
+    title: "Night passengers · SEL",
+    detail: "1 of 3 night takeoffs · 1 of 3 full-stop landings",
+    rule: "14 CFR § 61.57(b)",
+    state: "bad",
+  },
+  {
+    title: "Flight review",
+    detail: "Last review Jun 29, 2026",
+    rule: "Expires Jun 30, 2028",
+    state: "ok",
+  },
+  {
+    title: "Medical certificate",
+    detail: "Expires in 3 weeks",
+    rule: "Sep 4, 2026",
+    state: "warn",
+  },
+];
+
+function RecencyScene() {
+  return (
+    <div className="flex aspect-[16/10] flex-col gap-1.5 bg-muted/30 p-4 text-[10px]">
+      <p className="pb-0.5 font-mono text-[8px] uppercase tracking-widest text-muted-foreground">
+        Recency
+      </p>
+      {RECENCY.map((item) => (
+        <div
+          key={item.title}
+          className="flex items-start gap-2 rounded-lg border border-border bg-card px-2.5 py-2"
+        >
+          {item.state === "ok" && (
+            <CheckCircle2 className="mt-px size-3 shrink-0 text-emerald-500" strokeWidth={2} />
+          )}
+          {item.state === "warn" && (
+            <AlertTriangle className="mt-px size-3 shrink-0 text-amber-500" strokeWidth={2} />
+          )}
+          {item.state === "bad" && (
+            <span className="mt-1 size-1.5 shrink-0 rounded-full bg-rose-500" />
+          )}
+          <div className="min-w-0 leading-tight">
+            <p className="truncate text-[9.5px] font-semibold tracking-tight">{item.title}</p>
+            <p className="truncate text-[8px] text-muted-foreground">{item.detail}</p>
+            <p className="truncate font-mono text-[7.5px] text-muted-foreground/70">
+              {item.rule}
+            </p>
+          </div>
+        </div>
+      ))}
+    </div>
+  );
+}
+
 const SCENE_TITLES: Record<MockupScene, string> = {
   editor: "PureScribe — interview.m4a",
   models: "PureScribe — Models",
   export: "PureScribe — Export",
   dropzone: "PureScribe",
+  console: "Stagebox Remote — Y001 · Tio1608-D2",
+  units: "Stagebox Remote — Units",
+  logbook: "Pilote — Logbook",
+  recency: "Pilote — Totals",
 };
 
 /** A full app window rendering the requested scene. */
@@ -312,6 +618,10 @@ export function AppMockup({
         {scene === "models" && <ModelsScene />}
         {scene === "export" && <ExportScene />}
         {scene === "dropzone" && <DropzoneScene />}
+        {scene === "console" && <ConsoleScene animate={animate} />}
+        {scene === "units" && <UnitsScene />}
+        {scene === "logbook" && <LogbookScene />}
+        {scene === "recency" && <RecencyScene />}
       </MacWindow>
     </div>
   );

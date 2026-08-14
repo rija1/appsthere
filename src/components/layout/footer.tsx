@@ -1,6 +1,7 @@
 import { Mail, Rss } from "lucide-react";
 import { getTranslations } from "next-intl/server";
 import { LogoMark, Wordmark } from "@/components/brand/logo";
+import { apps } from "@/content/apps";
 import { Link } from "@/i18n/navigation";
 import { site } from "@/lib/site";
 import { NewsletterForm } from "./newsletter-form";
@@ -14,8 +15,11 @@ export async function Footer() {
       title: t("footer.product"),
       links: [
         { label: t("footer.allApps"), href: "/apps" },
-        { label: "PureScribe", href: "/apps/purescribe" },
-        { label: t("footer.changelog"), href: "/apps/purescribe#changelog" },
+        // Derived from the catalog so a new app never has to be added by hand.
+        ...apps.map((app) => ({
+          label: app.name,
+          href: `/apps/${app.slug}`,
+        })),
       ],
     },
     {
