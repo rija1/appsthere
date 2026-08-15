@@ -3,7 +3,9 @@
 import { motion } from "framer-motion";
 import {
   BadgeCheck,
+  CalendarClock,
   Captions,
+  Gauge,
   Lock,
   MoonStar,
   Radio,
@@ -109,6 +111,34 @@ function CurrencyChip() {
   );
 }
 
+function DueChip() {
+  return (
+    <>
+      <span className="flex size-7 items-center justify-center rounded-lg bg-brand-soft text-brand">
+        <CalendarClock className="size-3.5" strokeWidth={1.8} aria-hidden />
+      </span>
+      <div className="leading-tight">
+        <p className="text-xs font-semibold">Oil & filter due</p>
+        <p className="text-[10px] text-muted-foreground">In 9 days · or 1,240 km</p>
+      </div>
+    </>
+  );
+}
+
+function CounterChip() {
+  return (
+    <>
+      <span className="flex size-7 items-center justify-center rounded-lg bg-brand-soft text-brand">
+        <Gauge className="size-3.5" strokeWidth={1.8} aria-hidden />
+      </span>
+      <div className="leading-tight">
+        <p className="text-xs font-semibold">Engine 412 h</p>
+        <p className="text-[10px] text-muted-foreground">Next service ≈ Oct 3</p>
+      </div>
+    </>
+  );
+}
+
 /**
  * The pair of floating chips that flank the hero window, chosen to match the
  * app whose scene is on screen — a transcription claim next to a stagebox
@@ -120,6 +150,7 @@ const CHIPS: Partial<
   editor: { left: UploadsChip, right: ExportChip },
   console: { left: UnitsChip, right: GainChip },
   logbook: { left: NightChip, right: CurrencyChip },
+  dueboard: { left: DueChip, right: CounterChip },
 };
 
 const CHIP_CLASS =

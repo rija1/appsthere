@@ -1,6 +1,7 @@
 import type { AppDefinition } from "@/content/types";
 import { pilote } from "./pilote";
 import { pureScribe } from "./purescribe";
+import { serviced } from "./serviced";
 import { stageboxRemote } from "./stagebox-remote";
 
 /**
@@ -8,7 +9,7 @@ import { stageboxRemote } from "./stagebox-remote";
  * `purescribe.ts` and add it here — every page (catalog, product,
  * sitemap, structured data, fulfillment) derives from this list.
  */
-export const apps: AppDefinition[] = [pureScribe, stageboxRemote, pilote];
+export const apps: AppDefinition[] = [pureScribe, stageboxRemote, pilote, serviced];
 
 export function getApp(slug: string): AppDefinition | undefined {
   return apps.find((app) => app.slug === slug);

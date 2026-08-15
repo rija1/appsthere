@@ -3,6 +3,7 @@ import {
   CalendarClock,
   Cpu,
   Download,
+  House,
   Languages,
   Lock,
   MoonStar,
@@ -10,6 +11,7 @@ import {
   Plane,
   Shield,
   Waves,
+  Wrench,
   Zap,
   type LucideIcon,
 } from "lucide-react";
@@ -29,6 +31,8 @@ const ICONS: Record<AppFeature["icon"], LucideIcon> = {
   plane: Plane,
   moon: MoonStar,
   calendar: CalendarClock,
+  wrench: Wrench,
+  house: House,
 };
 
 /** Brand-tinted rounded square around a lucide icon. */

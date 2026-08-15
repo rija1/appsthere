@@ -5,6 +5,7 @@ import {
   CheckCircle2,
   FileAudio,
   FileVideo,
+  Gauge,
   Lock,
   MoonStar,
   Play,
@@ -589,6 +590,112 @@ function RecencyScene() {
   );
 }
 
+/* Serviced — the due-dates dashboard and the asset list, mirroring the app's
+   Due and Assets tabs. Demo data only. */
+
+const DUE_ROWS = [
+  { section: "Overdue", items: [
+    { asset: "Beneteau Oceanis 34", task: "Impeller — raw water pump", when: "12 days overdue", state: "bad", counter: "412 h" },
+  ]},
+  { section: "This month", items: [
+    { asset: "Honda CR-V", task: "Oil & filter", when: "in 9 days · or 1,240 km", state: "warn", counter: "82,760 km" },
+    { asset: "Maple Street house", task: "Furnace filter", when: "in 16 days", state: "warn" },
+  ]},
+  { section: "Upcoming", items: [
+    { asset: "Kubota BX2380", task: "Hydraulic fluid", when: "≈ Oct 3 · 50 h left", state: "ok", counter: "198 h" },
+    { asset: "Maple Street house", task: "Gutter cleaning", when: "in 2 months", state: "ok" },
+    { asset: "Honda CR-V", task: "Brake fluid", when: "in 5 months", state: "ok" },
+  ]},
+] as const;
+
+function DueboardScene() {
+  return (
+    <div className="flex aspect-[16/10] flex-col gap-1 bg-muted/30 p-4 text-[10px]">
+      {DUE_ROWS.map((group) => (
+        <div key={group.section} className="contents">
+          <p className="px-0.5 pb-0.5 pt-1 font-mono text-[8px] uppercase tracking-widest text-muted-foreground first:pt-0">
+            {group.section}
+          </p>
+          {group.items.map((item) => (
+            <div
+              key={item.task + item.asset}
+              className="flex items-center gap-2 rounded-lg border border-border bg-card px-2.5 py-1.5"
+            >
+              {item.state === "ok" && (
+                <CheckCircle2 className="size-3 shrink-0 text-emerald-500" strokeWidth={2} />
+              )}
+              {item.state === "warn" && (
+                <AlertTriangle className="size-3 shrink-0 text-amber-500" strokeWidth={2} />
+              )}
+              {item.state === "bad" && (
+                <span className="ml-0.5 mr-0.5 size-1.5 shrink-0 rounded-full bg-rose-500" />
+              )}
+              <div className="min-w-0 leading-tight">
+                <p className="truncate text-[9.5px] font-semibold tracking-tight">{item.task}</p>
+                <p className="truncate text-[8px] text-muted-foreground">{item.asset}</p>
+              </div>
+              <div className="ml-auto shrink-0 text-right leading-tight">
+                <p className="font-mono text-[8.5px] font-semibold tabular-nums">{item.when}</p>
+                {"counter" in item && item.counter && (
+                  <p className="flex items-center justify-end gap-0.5 font-mono text-[7.5px] text-muted-foreground/70">
+                    <Gauge className="size-2.5" strokeWidth={1.8} />
+                    {item.counter}
+                  </p>
+                )}
+              </div>
+            </div>
+          ))}
+        </div>
+      ))}
+    </div>
+  );
+}
+
+const ASSETS = [
+  { name: "Maple Street house", kind: "Home · 1998", due: 2, overdue: 0 },
+  { name: "Honda CR-V", kind: "Car · 2019 · 82,760 km", due: 1, overdue: 0 },
+  { name: "Beneteau Oceanis 34", kind: "Boat · 2011 · 412 h", due: 0, overdue: 1 },
+  { name: "Kubota BX2380", kind: "Equipment · 2021 · 198 h", due: 1, overdue: 0 },
+  { name: "Airstream Flying Cloud", kind: "RV · 2016 · 41,300 km", due: 0, overdue: 0 },
+];
+
+function UpkeepScene() {
+  return (
+    <div className="flex aspect-[16/10] flex-col gap-1.5 bg-muted/30 p-4 text-[10px]">
+      <p className="pb-0.5 font-mono text-[8px] uppercase tracking-widest text-muted-foreground">
+        Assets
+      </p>
+      {ASSETS.map((a) => (
+        <div
+          key={a.name}
+          className="flex items-center gap-2.5 rounded-lg border border-border bg-card px-2.5 py-2"
+        >
+          <span className="size-6 shrink-0 rounded-md bg-brand-soft" />
+          <div className="min-w-0 leading-tight">
+            <p className="truncate text-[9.5px] font-semibold tracking-tight">{a.name}</p>
+            <p className="truncate text-[8px] text-muted-foreground">{a.kind}</p>
+          </div>
+          <div className="ml-auto flex shrink-0 items-center gap-1">
+            {a.overdue > 0 && (
+              <span className="rounded-full bg-rose-500/15 px-1.5 py-px font-mono text-[7.5px] font-semibold text-rose-600">
+                {a.overdue} overdue
+              </span>
+            )}
+            {a.due > 0 && (
+              <span className="rounded-full bg-amber-500/15 px-1.5 py-px font-mono text-[7.5px] font-semibold text-amber-700">
+                {a.due} due
+              </span>
+            )}
+            {a.due === 0 && a.overdue === 0 && (
+              <CheckCircle2 className="size-3 text-emerald-500" strokeWidth={2} />
+            )}
+          </div>
+        </div>
+      ))}
+    </div>
+  );
+}
+
 const SCENE_TITLES: Record<MockupScene, string> = {
   editor: "PureScribe — interview.m4a",
   models: "PureScribe — Models",
@@ -598,6 +705,8 @@ const SCENE_TITLES: Record<MockupScene, string> = {
   units: "Stagebox Remote — Units",
   logbook: "Pilote — Logbook",
   recency: "Pilote — Totals",
+  dueboard: "Serviced — Due",
+  upkeep: "Serviced — Assets",
 };
 
 /** A full app window rendering the requested scene. */
@@ -622,6 +731,8 @@ export function AppMockup({
         {scene === "units" && <UnitsScene />}
         {scene === "logbook" && <LogbookScene />}
         {scene === "recency" && <RecencyScene />}
+        {scene === "dueboard" && <DueboardScene />}
+        {scene === "upkeep" && <UpkeepScene />}
       </MacWindow>
     </div>
   );
