@@ -1,13 +1,14 @@
 import { Mail, Rss } from "lucide-react";
-import { getTranslations } from "next-intl/server";
+import { getLocale, getTranslations } from "next-intl/server";
 import { LogoMark, Wordmark } from "@/components/brand/logo";
 import { apps } from "@/content/apps";
+import { pick } from "@/content/types";
 import { Link } from "@/i18n/navigation";
 import { site } from "@/lib/site";
 import { NewsletterForm } from "./newsletter-form";
 
 export async function Footer() {
-  const t = await getTranslations();
+  const [t, locale] = await Promise.all([getTranslations(), getLocale()]);
   const year = new Date().getFullYear();
 
   const columns = [
@@ -17,7 +18,7 @@ export async function Footer() {
         { label: t("footer.allApps"), href: "/apps" },
         // Derived from the catalog so a new app never has to be added by hand.
         ...apps.map((app) => ({
-          label: app.name,
+          label: pick(app.name, locale),
           href: `/apps/${app.slug}`,
         })),
       ],

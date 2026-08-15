@@ -14,7 +14,7 @@ import { l, type AppDefinition } from "@/content/types";
  */
 export const pilote: AppDefinition = {
   slug: "pilote",
-  name: "Pilote",
+  name: l("Pilot", "Pilote", "Pilote"),
   category: "productivity",
 
   tagline: l(

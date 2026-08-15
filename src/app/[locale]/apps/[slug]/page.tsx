@@ -37,11 +37,11 @@ export async function generateMetadata({
 
   const description = pick(app.shortDescription, locale);
   return {
-    title: `${app.name} — ${pick(app.tagline, locale)}`,
+    title: `${pick(app.name, locale)} — ${pick(app.tagline, locale)}`,
     description,
     alternates: alternatesFor(`/apps/${app.slug}`, locale),
     openGraph: {
-      title: app.name,
+      title: pick(app.name, locale),
       description,
       type: "website",
     },
@@ -59,7 +59,7 @@ export default async function AppDetailPage({ params }: AppPageProps) {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",
-    name: app.name,
+    name: pick(app.name, locale),
     operatingSystem: app.platforms.join(", "),
     applicationCategory: "ProductivityApplication",
     description: pick(app.shortDescription, locale as Locale),

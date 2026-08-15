@@ -95,7 +95,7 @@ export async function POST(request: Request): Promise<NextResponse> {
   // email is harmless (each mint yields an equally valid key).
   await sendLicenseEmail({
     to: email,
-    appName: app.name,
+    appName: app.name.en,
     licenseKey,
     orderId: event.data.id,
   });

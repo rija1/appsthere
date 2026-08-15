@@ -42,7 +42,7 @@ export async function FeaturedApps() {
 
                       <div>
                         <h3 className="text-2xl font-semibold tracking-tight">
-                          {app.name}
+                          {pick(app.name, locale)}
                         </h3>
                         <p className="pt-1 text-base text-brand">
                           {pick(app.tagline, locale)}

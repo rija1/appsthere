@@ -11,7 +11,7 @@ import { l, type AppDefinition } from "@/content/types";
  */
 export const stageboxRemote: AppDefinition = {
   slug: "stagebox-remote",
-  name: "Stagebox Remote",
+  name: l("Stagebox Remote", "Stagebox Remote", "Stagebox Remote"),
   category: "utilities",
 
   tagline: l(

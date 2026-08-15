@@ -88,7 +88,7 @@ export async function POST(request: Request): Promise<NextResponse> {
 
           await sendLicenseEmail({
             to: email,
-            appName: app.name,
+            appName: app.name.en,
             licenseKey: mintLicenseKey({
               email,
               productID: app.licenseProductID,

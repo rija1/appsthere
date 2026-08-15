@@ -9,7 +9,7 @@ import { l, type AppDefinition } from "@/content/types";
  */
 export const pureScribe: AppDefinition = {
   slug: "purescribe",
-  name: "PureScribe",
+  name: l("PureScribe", "PureScribe", "PureScribe"),
   category: "productivity",
 
   tagline: l(

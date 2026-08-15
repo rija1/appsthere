@@ -1,10 +1,11 @@
-import { getTranslations } from "next-intl/server";
+import { getLocale, getTranslations } from "next-intl/server";
 import { AppStoreCta } from "@/components/app-store-cta";
 import { Reveal } from "@/components/motion/reveal";
 import type { AppDefinition } from "@/content/types";
+import { pick } from "@/content/types";
 
 export async function DownloadCta({ app }: { app: AppDefinition }) {
-  const t = await getTranslations();
+  const [t, locale] = await Promise.all([getTranslations(), getLocale()]);
 
   return (
     <section className="container-page pb-24 pt-4 md:pb-32" id="download">
@@ -20,7 +21,7 @@ export async function DownloadCta({ app }: { app: AppDefinition }) {
           />
           <div className="relative flex flex-col items-center gap-5">
             <h2 className="max-w-xl text-balance text-3xl font-semibold tracking-tight md:text-4xl">
-              {t("appPage.downloadTitle", { name: app.name })}
+              {t("appPage.downloadTitle", { name: pick(app.name, locale) })}
             </h2>
             <p className="max-w-lg text-balance leading-relaxed text-muted-foreground">
               {t("appPage.downloadSubtitle")}

@@ -40,7 +40,7 @@ export async function AppPricing({ app }: { app: AppDefinition }) {
                   </h3>
                   {tier.highlighted && (
                     <span className="rounded-full bg-brand px-2.5 py-0.5 font-mono text-[10px] font-semibold uppercase tracking-wider text-brand-foreground">
-                      {app.name.split(" ")[0]} Pro
+                      {pick(app.name, locale).split(" ")[0]} Pro
                     </span>
                   )}
                 </div>

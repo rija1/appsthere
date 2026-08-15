@@ -71,7 +71,7 @@ export default async function AppsPage({ params }: AppsPageProps) {
                       </div>
                       <div>
                         <h2 className="text-2xl font-semibold tracking-tight">
-                          {app.name}
+                          {pick(app.name, locale)}
                         </h2>
                         <p className="pt-1 text-brand">{pick(app.tagline, activeLocale)}</p>
                       </div>

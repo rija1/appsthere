@@ -108,7 +108,12 @@ export interface Requirement {
 
 export interface AppDefinition {
   slug: string;
-  name: string;
+  /**
+   * Nom de marque, traduisible : l'anglais dit « Pilot », le français
+   * « Pilote ». Il doit correspondre au nom de la fiche App Store de la
+   * même langue.
+   */
+  name: Localized;
   category: "productivity" | "media" | "utilities";
   tagline: Localized;
   shortDescription: Localized;

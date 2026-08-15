@@ -33,7 +33,7 @@ export async function AppHero({ app }: { app: AppDefinition }) {
 
           <Reveal delay={0.08}>
             <h1 className="text-balance text-4xl font-semibold leading-[1.08] tracking-[-0.03em] md:text-[3.4rem]">
-              {app.name}
+              {pick(app.name, locale)}
             </h1>
             <p className="pt-3 text-xl font-medium text-brand md:text-2xl">
               {pick(app.tagline, locale)}
