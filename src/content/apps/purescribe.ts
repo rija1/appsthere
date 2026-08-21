@@ -36,12 +36,9 @@ export const pureScribe: AppDefinition = {
   heroScene: "editor",
 
   licenseProductID: "com.purescribe.app",
-  // Real App Store Connect app ID, confirmed via the 6 Aug 2026 upload
-  // (bundle com.purescribe.app, "PureScribe - Speech to Text"). Flip this
-  // on once the app has actually cleared App Review — apps.apple.com
-  // 404s for an app that isn't live yet.
-  // appStoreUrl: "https://apps.apple.com/app/id6797195935",
-  appStoreUrl: undefined,
+  // Live on the Mac App Store (verified 2026-08-20; the page resolves and
+  // sells Pro at $9.99).
+  appStoreUrl: "https://apps.apple.com/app/id6797195935",
 
   features: [
     {
@@ -236,7 +233,7 @@ export const pureScribe: AppDefinition = {
     {
       id: "pro",
       name: l("Pro", "Pro", "专业版"),
-      amountUsd: 14,
+      amountUsd: 9.99,
       billing: "one-time",
       description: l(
         "Maximum accuracy for work that matters. Pay once, keep it forever.",
@@ -419,41 +416,8 @@ export const pureScribe: AppDefinition = {
     },
   ],
 
-  // PLACEHOLDER testimonials for layout purposes — replace with real,
-  // attributed customer quotes before launch (see README → Content).
-  reviews: [
-    {
-      id: "rev-1",
-      author: "Camille R.",
-      role: l("Podcast producer", "Productrice de podcasts", "播客制作人"),
-      rating: 5,
-      quote: l(
-        "I stopped uploading interviews to cloud services the day I found this. Same accuracy, none of the worry.",
-        "J'ai arrêté d'envoyer mes entretiens dans le cloud le jour où je l'ai découvert. Même précision, zéro inquiétude.",
-        "发现它那天起，我就不再把采访上传到云端了。精度一样，却完全不用担心。",
-      ),
-    },
-    {
-      id: "rev-2",
-      author: "Thomas B.",
-      role: l("PhD researcher", "Doctorant", "博士研究员"),
-      rating: 5,
-      quote: l(
-        "Two hours of field recordings transcribed over lunch, on a MacBook Air. The synced playback makes verification painless.",
-        "Deux heures d'enregistrements de terrain transcrites pendant le déjeuner, sur un MacBook Air. La lecture synchronisée rend la vérification indolore.",
-        "午饭时间就在 MacBook Air 上转完了两小时的田野录音。同步播放让核对轻松无比。",
-      ),
-    },
-    {
-      id: "rev-3",
-      author: "Mei L.",
-      role: l("Video editor", "Monteuse vidéo", "视频剪辑师"),
-      rating: 4,
-      quote: l(
-        "SRT export drops straight into my timeline. I'd pay for that feature alone.",
-        "L'export SRT s'intègre directement dans ma timeline. Je paierais rien que pour ça.",
-        "SRT 导出直接进时间线。光这一个功能就值回票价。",
-      ),
-    },
-  ],
+  // Aucun témoignage tant qu'il n'existe pas de citation réelle et
+  // attribuée avec l'accord de son auteur. Les placeholders qui figuraient
+  // ici (noms inventés) étaient en ligne : retirés le 2026-08-20.
+  reviews: [],
 };
