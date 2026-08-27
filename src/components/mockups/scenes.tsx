@@ -696,6 +696,168 @@ function UpkeepScene() {
   );
 }
 
+/**
+ * Progression vers un brevet : chaque exigence, sa jauge, et ce qui manque.
+ * Chiffres alignés sur le jeu de démonstration de l'app (RYA Yachtmaster
+ * Offshore, voile) — pas de données inventées.
+ */
+const SEA_PROGRESS = [
+  { title: "Days at sea", value: "25 / 50", ratio: 0.5, met: false, note: "25 to go" },
+  { title: "Days as skipper", value: "11 / 5", ratio: 1, met: true, note: "" },
+  { title: "Miles logged", value: "1,918 M / 2,500 M", ratio: 0.77, met: false, note: "582 M to go" },
+  { title: "Passages over 60 M", value: "6 / 5", ratio: 1, met: true, note: "" },
+  { title: "Miles in tidal waters", value: "65 % / 50 %", ratio: 1, met: true, note: "" },
+];
+
+function SeaProgressScene() {
+  return (
+    <div className="flex aspect-[16/10] flex-col gap-1.5 bg-muted/30 p-4 text-[10px]">
+      <p className="pb-0.5 font-mono text-[8px] uppercase tracking-widest text-muted-foreground">
+        RYA Yachtmaster Offshore (Sail)
+      </p>
+      {SEA_PROGRESS.map((item) => (
+        <div
+          key={item.title}
+          className="rounded-lg border border-border bg-card px-2.5 py-1.5 leading-tight"
+        >
+          <div className="flex items-baseline justify-between gap-2">
+            <p className="truncate text-[9.5px] font-semibold tracking-tight">{item.title}</p>
+            <span className="flex shrink-0 items-center gap-1">
+              <span
+                className={cn(
+                  "font-mono text-[9px] font-semibold tabular-nums",
+                  item.met && "text-emerald-600",
+                )}
+              >
+                {item.value}
+              </span>
+              {item.met && (
+                <CheckCircle2 className="size-2.5 text-emerald-500" strokeWidth={2} />
+              )}
+            </span>
+          </div>
+          <div className="mt-1 h-1 overflow-hidden rounded-full bg-muted">
+            <div
+              className={cn("h-full rounded-full", item.met ? "bg-emerald-500" : "bg-primary")}
+              style={{ width: `${Math.round(item.ratio * 100)}%` }}
+            />
+          </div>
+          {item.note && (
+            <p className="pt-0.5 font-mono text-[7.5px] text-muted-foreground/70">{item.note}</p>
+          )}
+        </div>
+      ))}
+    </div>
+  );
+}
+
+/** Le carnet : les navigations, leur distance, et ce qu'elles apportent. */
+const SEA_LOG_ROWS: Array<
+  | { kind: "year"; label: string; total: string }
+  | {
+      kind: "passage";
+      date: string;
+      route: string;
+      vessel: string;
+      miles: string;
+      night?: string;
+      qualifying?: boolean;
+      estimated?: string;
+    }
+> = [
+  { kind: "year", label: "2026", total: "1,102 M" },
+  {
+    kind: "passage",
+    date: "27 Jul",
+    route: "Cherbourg → Yarmouth",
+    vessel: "Sun Odyssey 409 · skipper",
+    miles: "63 M",
+    night: "1.5 h",
+    qualifying: true,
+    estimated: "Includes 9 M estimated across a signal gap",
+  },
+  {
+    kind: "passage",
+    date: "28 Jun",
+    route: "Brest → La Corogne",
+    vessel: "Sun Odyssey 409 · skipper",
+    miles: "385 M",
+    night: "16 h",
+    qualifying: true,
+  },
+  {
+    kind: "passage",
+    date: "1 Jul",
+    route: "La Corogne → Muxía",
+    vessel: "Sun Odyssey 409 · skipper",
+    miles: "24 M",
+  },
+  {
+    kind: "passage",
+    date: "2 Apr",
+    route: "Naples → Capri",
+    vessel: "M/Y Aurelia",
+    miles: "32 M",
+  },
+];
+
+function SeaLogScene() {
+  return (
+    <div className="flex aspect-[16/10] flex-col gap-1 bg-muted/30 p-4 text-[10px]">
+      {SEA_LOG_ROWS.map((row) =>
+        row.kind === "year" ? (
+          <div
+            key={row.label}
+            className="flex items-baseline justify-between px-0.5 pb-0.5 pt-1 first:pt-0"
+          >
+            <p className="font-mono text-[8px] uppercase tracking-widest text-muted-foreground">
+              {row.label}
+            </p>
+            <p className="font-mono text-[9px] font-semibold tabular-nums text-muted-foreground">
+              {row.total}
+            </p>
+          </div>
+        ) : (
+          <div
+            key={`${row.date}-${row.route}`}
+            className="rounded-lg border border-border bg-card px-2.5 py-1.5"
+          >
+            <div className="flex items-center gap-2">
+              <span className="w-9 shrink-0 font-mono text-[8px] text-muted-foreground">
+                {row.date}
+              </span>
+              <div className="min-w-0 leading-tight">
+                <p className="truncate text-[9.5px] font-semibold tracking-tight">{row.route}</p>
+                <p className="truncate text-[8px] text-muted-foreground">{row.vessel}</p>
+              </div>
+              <div className="ml-auto flex shrink-0 items-center gap-2">
+                {row.night && (
+                  <span className="flex items-center gap-0.5 text-[8px] text-muted-foreground">
+                    <MoonStar className="size-2.5" strokeWidth={1.8} />
+                    {row.night}
+                  </span>
+                )}
+                {row.qualifying && (
+                  <CheckCircle2 className="size-2.5 text-emerald-500" strokeWidth={2} />
+                )}
+                <span className="font-mono text-[10px] font-semibold tabular-nums">
+                  {row.miles}
+                </span>
+              </div>
+            </div>
+            {row.estimated && (
+              <p className="flex items-center gap-1 pt-0.5 text-[7.5px] text-amber-600">
+                <AlertTriangle className="size-2" strokeWidth={2} />
+                {row.estimated}
+              </p>
+            )}
+          </div>
+        ),
+      )}
+    </div>
+  );
+}
+
 const SCENE_TITLES: Record<MockupScene, string> = {
   editor: "PureScribe — interview.m4a",
   models: "PureScribe — Models",
@@ -707,6 +869,8 @@ const SCENE_TITLES: Record<MockupScene, string> = {
   recency: "Pilote — Totals",
   dueboard: "Serviced — Due",
   upkeep: "Serviced — Assets",
+  seaprogress: "SeaTally — Progress",
+  sealog: "SeaTally — Passages",
 };
 
 /** A full app window rendering the requested scene. */
@@ -733,6 +897,8 @@ export function AppMockup({
         {scene === "recency" && <RecencyScene />}
         {scene === "dueboard" && <DueboardScene />}
         {scene === "upkeep" && <UpkeepScene />}
+        {scene === "seaprogress" && <SeaProgressScene />}
+        {scene === "sealog" && <SeaLogScene />}
       </MacWindow>
     </div>
   );

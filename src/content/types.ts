@@ -30,7 +30,9 @@ export type MockupScene =
   | "logbook"
   | "recency"
   | "dueboard"
-  | "upkeep";
+  | "upkeep"
+  | "seaprogress"
+  | "sealog";
 
 export interface AppFeature {
   id: string;
