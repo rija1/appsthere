@@ -14,11 +14,12 @@ export function localizedPath(path: string, locale: Locale): string {
 export function alternatesFor(
   path: string,
   locale: Locale,
+  locales: readonly Locale[] = routing.locales,
 ): NonNullable<Metadata["alternates"]> {
   const languages: Record<string, string> = {
     "x-default": localizedPath(path, routing.defaultLocale),
   };
-  for (const candidate of routing.locales) {
+  for (const candidate of locales) {
     languages[candidate] = localizedPath(path, candidate);
   }
   return {

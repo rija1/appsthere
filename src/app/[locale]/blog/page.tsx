@@ -5,7 +5,7 @@ import { ArrowRight } from "lucide-react";
 import { Reveal, RevealGroup, RevealItem } from "@/components/motion/reveal";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
-import { posts } from "@/content/blog";
+import { postsFor } from "@/content/blog";
 import { pick } from "@/content/types";
 import { Link } from "@/i18n/navigation";
 import { routing } from "@/i18n/routing";
@@ -46,7 +46,7 @@ export default async function BlogPage({ params }: BlogPageProps) {
       </Reveal>
 
       <RevealGroup className="flex flex-col gap-4">
-        {posts.map((post) => (
+        {postsFor(locale).map((post) => (
           <RevealItem key={post.slug}>
             <Link
               href={`/blog/${post.slug}`}

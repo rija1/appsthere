@@ -159,8 +159,11 @@
       "development": "Development",
       "tips": "Tips",
       "ai": "AI",
-      "windows": "Windows"
-    }
+      "windows": "Windows",
+      "guides": "Guides"
+    },
+    "relatedApp": "Related app",
+    "sources": "Sources"
   },
   "account": {
     "metaTitle": "Account",

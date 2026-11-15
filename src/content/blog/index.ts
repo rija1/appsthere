@@ -1,10 +1,13 @@
 import { l, type BlogPost } from "@/content/types";
+import { routing, type Locale } from "@/i18n/routing";
+import { guides } from "./guides";
 
 /**
  * Blog posts, newest first. To publish: add a post object here — the index,
  * post pages, sitemap, and RSS feed all derive from this list.
  */
 export const posts: BlogPost[] = [
+  ...guides,
   {
     slug: "introducing-purescribe",
     category: "updates",
@@ -160,4 +163,14 @@ export const posts: BlogPost[] = [
 
 export function getPost(slug: string): BlogPost | undefined {
   return posts.find((post) => post.slug === slug);
+}
+
+/** Locales a post is published in. */
+export function postLocales(post: BlogPost): readonly Locale[] {
+  return post.locales ?? routing.locales;
+}
+
+/** Posts published in a locale, newest first. */
+export function postsFor(locale: string): BlogPost[] {
+  return posts.filter((post) => postLocales(post).includes(locale as Locale));
 }

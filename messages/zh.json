@@ -159,8 +159,11 @@
       "development": "开发",
       "tips": "技巧",
       "ai": "AI",
-      "windows": "Windows"
-    }
+      "windows": "Windows",
+      "guides": "指南"
+    },
+    "relatedApp": "相关应用",
+    "sources": "资料来源"
   },
   "account": {
     "metaTitle": "账户",

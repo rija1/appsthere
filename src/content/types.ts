@@ -152,19 +152,48 @@ export interface AppDefinition {
   reviews: Review[];
 }
 
+/**
+ * Paragraphs and list items accept inline links written as
+ * `[label](/apps/seatally)` (internal, locale-aware) or `[label](https://…)`.
+ */
 export interface BlogPostSection {
   heading?: Localized;
   paragraphs: Localized[];
+  /** Optional bullet list rendered after the paragraphs. */
+  list?: Localized[];
+}
+
+export interface BlogSource {
+  label: string;
+  url: string;
 }
 
 export interface BlogPost {
   slug: string;
-  category: "updates" | "development" | "tips" | "ai" | "windows";
+  category: "updates" | "development" | "tips" | "ai" | "windows" | "guides";
   title: Localized;
   excerpt: Localized;
   publishedAt: string;
   readingMinutes: number;
   sections: BlogPostSection[];
+  /**
+   * Locales the post is written in. Omitted = every locale. Other locales
+   * get a 404, no index entry, and no sitemap or hreflang alternate.
+   */
+  locales?: Locale[];
+  /** Primary sources, listed at the end of the post. */
+  sources?: BlogSource[];
+  /** Slug of the app the post leads to; rendered as a closing card. */
+  relatedApp?: string;
+}
+
+/**
+ * Localized value for a post written in English and French only (see
+ * `BlogPost.locales`); the zh slot repeats the English text and is never
+ * rendered.
+ */
+export function enFr(en: string, fr: string): Localized {
+  return { en, fr, zh: en };
 }
 
 export interface Testimonial {

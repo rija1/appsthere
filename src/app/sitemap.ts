@@ -1,8 +1,8 @@
 import type { MetadataRoute } from "next";
 import { apps } from "@/content/apps";
-import { posts } from "@/content/blog";
+import { postLocales, posts } from "@/content/blog";
 import { legalDocs } from "@/content/legal";
-import { routing } from "@/i18n/routing";
+import { routing, type Locale } from "@/i18n/routing";
 import { localizedPath } from "@/lib/seo";
 import { absoluteUrl } from "@/lib/site";
 
@@ -10,6 +10,8 @@ interface Entry {
   path: string;
   lastModified?: string;
   priority: number;
+  /** Locales the page exists in; defaults to every locale. */
+  locales?: readonly Locale[];
 }
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -26,6 +28,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       path: `/blog/${post.slug}`,
       lastModified: post.publishedAt,
       priority: 0.6,
+      locales: postLocales(post),
     })),
     { path: "/account", priority: 0.4 },
     ...legalDocs.map((doc) => ({
@@ -35,8 +38,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     })),
   ];
 
-  return entries.flatMap((entry) =>
-    routing.locales.map((locale) => ({
+  return entries.flatMap((entry) => {
+    const locales = entry.locales ?? routing.locales;
+    return locales.map((locale) => ({
       url: absoluteUrl(localizedPath(entry.path, locale)),
       lastModified: entry.lastModified
         ? new Date(entry.lastModified)
@@ -44,12 +48,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: entry.priority,
       alternates: {
         languages: Object.fromEntries(
-          routing.locales.map((alternate) => [
+          locales.map((alternate) => [
             alternate,
             absoluteUrl(localizedPath(entry.path, alternate)),
           ]),
         ),
       },
-    })),
-  );
+    }));
+  });
 }

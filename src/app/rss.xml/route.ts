@@ -1,4 +1,4 @@
-import { posts } from "@/content/blog";
+import { postsFor } from "@/content/blog";
 import { pick } from "@/content/types";
 import { absoluteUrl, site } from "@/lib/site";
 
@@ -12,7 +12,7 @@ function escapeXml(value: string): string {
 
 /** English-language RSS feed of the blog. */
 export function GET(): Response {
-  const items = posts
+  const items = postsFor("en")
     .map((post) => {
       const url = absoluteUrl(`/blog/${post.slug}`);
       return [
