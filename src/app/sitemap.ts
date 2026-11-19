@@ -1,5 +1,6 @@
 import type { MetadataRoute } from "next";
 import { apps } from "@/content/apps";
+import { blackFridayLocales } from "@/content/black-friday";
 import { postLocales, posts } from "@/content/blog";
 import { legalDocs } from "@/content/legal";
 import { routing, type Locale } from "@/i18n/routing";
@@ -23,6 +24,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: app.updatedAt,
       priority: 0.9,
     })),
+    { path: "/black-friday", priority: 0.8, locales: blackFridayLocales },
     { path: "/blog", priority: 0.7 },
     ...posts.map((post) => ({
       path: `/blog/${post.slug}`,
