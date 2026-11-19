@@ -51,7 +51,9 @@ export async function generateMetadata({
       locale: OG_LOCALES[locale],
       title: copy.metaTitle,
       description: copy.metaDescription,
-      images: [{ url: blackFriday.ogImage, width: 512, height: 512, alt: site.name }],
+      images: [
+        { url: blackFriday.ogImage, width: 512, height: 512, alt: site.name },
+      ],
     },
     twitter: {
       card: "summary",
@@ -63,7 +65,9 @@ export async function generateMetadata({
   };
 }
 
-export default async function BlackFridayPage({ params }: BlackFridayPageProps) {
+export default async function BlackFridayPage({
+  params,
+}: BlackFridayPageProps) {
   const { locale } = await params;
   if (!isDealLocale(locale)) notFound();
   setRequestLocale(locale);
@@ -125,67 +129,75 @@ export default async function BlackFridayPage({ params }: BlackFridayPageProps) 
           <RevealGroup className="grid gap-6 md:grid-cols-2">
             {blackFridayDeals.map((deal) => (
               <RevealItem key={deal.slug} className="h-full">
-                <Card className="flex h-full flex-col gap-5 p-6 md:p-8">
-                  <div className="flex items-center gap-4">
-                    <Image
-                      src={deal.icon}
-                      alt=""
-                      width={64}
-                      height={64}
-                      unoptimized
-                      className="size-16 shrink-0"
-                    />
-                    <div className="flex flex-col items-start gap-1.5">
-                      <h2 className="text-xl font-semibold tracking-tight">
-                        {deal.name[locale]}
-                      </h2>
-                      <Badge variant="brand">{copy.off(deal.percentOff)}</Badge>
+                <div id={deal.anchor} className="h-full scroll-mt-24">
+                  <Card className="flex h-full flex-col gap-5 p-6 md:p-8">
+                    <div className="flex items-center gap-4">
+                      <Image
+                        src={deal.icon}
+                        alt=""
+                        width={64}
+                        height={64}
+                        unoptimized
+                        className="size-16 shrink-0"
+                      />
+                      <div className="flex flex-col items-start gap-1.5">
+                        <h2 className="text-xl font-semibold tracking-tight">
+                          {deal.name[locale]}
+                        </h2>
+                        <Badge variant="brand">
+                          {copy.off(deal.percentOff)}
+                        </Badge>
+                      </div>
                     </div>
-                  </div>
 
-                  <p className="leading-relaxed text-muted-foreground">
-                    {deal.description[locale]}
-                  </p>
+                    <p className="leading-relaxed text-muted-foreground">
+                      {deal.description[locale]}
+                    </p>
 
-                  <div className="mt-auto flex flex-col gap-1">
-                    <span className="text-sm text-muted-foreground">{copy.pro}</span>
-                    <div className="flex items-baseline gap-3">
-                      <span className="sr-only">{copy.was}:</span>
-                      <s className="text-lg text-muted-foreground">
-                        {formatUsd(deal.regularUsd)}
-                      </s>
-                      <span className="sr-only">{copy.now}:</span>
-                      <span className="text-3xl font-semibold tracking-tight">
-                        {formatUsd(deal.dealUsd)}
+                    <div className="mt-auto flex flex-col gap-1">
+                      <span className="text-sm text-muted-foreground">
+                        {copy.pro}
                       </span>
+                      <div className="flex items-baseline gap-3">
+                        <span className="sr-only">{copy.was}:</span>
+                        <s className="text-lg text-muted-foreground">
+                          {formatUsd(deal.regularUsd)}
+                        </s>
+                        <span className="sr-only">{copy.now}:</span>
+                        <span className="text-3xl font-semibold tracking-tight">
+                          {formatUsd(deal.dealUsd)}
+                        </span>
+                      </div>
                     </div>
-                  </div>
 
-                  <div className="flex flex-wrap items-center gap-3">
-                    <a
-                      href={deal.appStoreUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className={buttonVariants({})}
-                    >
-                      <Apple className="size-4" aria-hidden />
-                      {copy.appStore}
-                    </a>
-                    <Link
-                      href={`/apps/${deal.slug}`}
-                      className={buttonVariants({ variant: "ghost" })}
-                    >
-                      {copy.appPage}
-                      <ArrowRight className="size-4" aria-hidden />
-                    </Link>
-                  </div>
-                </Card>
+                    <div className="flex flex-wrap items-center gap-3">
+                      <a
+                        href={deal.appStoreUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className={buttonVariants({})}
+                      >
+                        <Apple className="size-4" aria-hidden />
+                        {copy.appStore}
+                      </a>
+                      <Link
+                        href={`/apps/${deal.slug}`}
+                        className={buttonVariants({ variant: "ghost" })}
+                      >
+                        {copy.appPage}
+                        <ArrowRight className="size-4" aria-hidden />
+                      </Link>
+                    </div>
+                  </Card>
+                </div>
               </RevealItem>
             ))}
           </RevealGroup>
 
           <Reveal className="mt-14 max-w-2xl">
-            <h2 className="text-2xl font-semibold tracking-tight">{copy.howTitle}</h2>
+            <h2 className="text-2xl font-semibold tracking-tight">
+              {copy.howTitle}
+            </h2>
             <ul className="mt-4 flex list-disc flex-col gap-2 pl-5 leading-relaxed text-muted-foreground">
               {copy.how.map((line) => (
                 <li key={line}>{line}</li>

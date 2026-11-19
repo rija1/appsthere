@@ -21,6 +21,8 @@ type Text = Record<BlackFridayLocale, string>;
 export interface BlackFridayDeal {
   /** Slug of the app page under /apps. */
   slug: string;
+  /** Anchor id on /black-friday, used by deal lists (#purescribe, #pilot...). */
+  anchor: string;
   name: Text;
   icon: string;
   description: Text;
@@ -33,6 +35,7 @@ export interface BlackFridayDeal {
 export const blackFridayDeals: BlackFridayDeal[] = [
   {
     slug: "purescribe",
+    anchor: "purescribe",
     name: { en: "PureScribe", fr: "PureScribe" },
     icon: "/apps/icons/purescribe.png",
     description: {
@@ -46,6 +49,7 @@ export const blackFridayDeals: BlackFridayDeal[] = [
   },
   {
     slug: "pilote",
+    anchor: "pilot",
     name: { en: "Pilot – Flight Logbook", fr: "Pilote, carnet de vol" },
     icon: "/apps/icons/pilot.png",
     description: {
@@ -59,6 +63,7 @@ export const blackFridayDeals: BlackFridayDeal[] = [
   },
   {
     slug: "seatally",
+    anchor: "seatally",
     name: { en: "SeaTally – Sea Time Logbook", fr: "SeaTally, carnet de mer" },
     icon: "/apps/icons/seatally.png",
     description: {
@@ -72,7 +77,11 @@ export const blackFridayDeals: BlackFridayDeal[] = [
   },
   {
     slug: "serviced",
-    name: { en: "Serviced – Maintenance Log", fr: "Entretien, carnet d'entretien" },
+    anchor: "serviced",
+    name: {
+      en: "Serviced – Maintenance Log",
+      fr: "Entretien, carnet d'entretien",
+    },
     icon: "/apps/icons/serviced.png",
     description: {
       en: "A maintenance log for your home, cars, boat and equipment, due by date or by engine hours.",
